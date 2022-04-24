@@ -1,0 +1,29 @@
+footer {
+    margin:30px 0px 20px 0px;
+    background-color: blanchedalmond;
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;;
+}
+
+.footer-contact {
+    text-align: center;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media i {
+    padding: 5px;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-bottom: 20px;
+}
