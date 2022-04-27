@@ -1,3 +1,11 @@
 <body>
-    Contact page!
+    <section class="form">
+        <app-contact-form *ngIf="formOption"></app-contact-form>
+        <app-order-form></app-order-form>
+    </section>
+
+    <section class="social-media">
+       <app-social-media></app-social-media>
+    </section>
+
 </body>

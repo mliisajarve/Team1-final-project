@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { OrderFormComponent } from './order-form/order-form.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     HeaderComponent,
     FooterComponent,
     MainPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    ContactFormComponent,
+    OrderFormComponent,
+    SocialMediaComponent
   ],
   imports: [
     BrowserModule,

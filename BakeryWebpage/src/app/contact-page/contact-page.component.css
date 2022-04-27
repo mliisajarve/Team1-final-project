@@ -2,4 +2,20 @@ body{
     min-height: 95vh;
     position: relative;
     top: 150px;
+    width: 80%;
+    left: 10%;
+}
+.form{
+    display: flex;
+    justify-content: center;
+}
+.social-media{
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
 }
