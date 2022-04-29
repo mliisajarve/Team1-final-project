@@ -1,6 +1,13 @@
 main{
     position: relative;
-    top: 300px;
+    top: 250px;
     min-height: 95vh;
     margin-bottom: 250px;
+}
+
+@media screen  and (max-width: 425px) {
+    main{
+        top: 200px;
+    }
+    
 }
