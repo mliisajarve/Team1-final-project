@@ -94,3 +94,6 @@ body::before{
     text-decoration: underline;
     margin-bottom: 20px;
 }
+.hidden {
+    display: none;
+}

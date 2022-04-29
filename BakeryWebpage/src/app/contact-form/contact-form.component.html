@@ -1,19 +1,20 @@
-<body>
-    <form action="">
+<body [class] = 'hideForm'>
+    <form class="contact-form" (submit)="onSubmit($event)" >
         <section class="contact-inputs">
             <section class="inputs">
                 <p class="name"></p>
-                <input type="text" name="Name" required>
+                <input type="text" name="name" [(ngModel)]="name" required A-Za-z>
                 <p class="email"></p>
-                <input type="email" name="email" id="" required>
+                <input type="email" name="email" [(ngModel)]="email" required>
                 <p class="number"></p>
-                <input type="tel" name="mobilenumber" id="">
+                <input type="text" name="number" [(ngModel)]="number" >
             </section>
             <section>
                 <p class="additional"></p>
-                <textarea name="" id="" cols="30" rows="10" wrap="soft" required></textarea>
+                <textarea name="info" id="" cols="30" rows="10" wrap="soft" required [(ngModel)]="info"></textarea>
             </section>
-            <div class="submit-button"> Send</div>
+            <input type="submit"  class="submit-button" value='Send' >
         </section>
     </form>
 </body>
+
