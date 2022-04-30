@@ -37,6 +37,7 @@ body {
 
 .carousel{
     margin-top: 80px;
+    z-index: 0;
 }
 
 .feedback-div {
