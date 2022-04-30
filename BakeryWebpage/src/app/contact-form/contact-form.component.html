@@ -1,20 +1,29 @@
-<body [class] = 'hideForm'>
-    <form class="contact-form" (submit)="onSubmit($event)" >
+<body [class]='hideForm'>
+    <form class="contact-form" (submit)="onSubmit($event)">
         <section class="contact-inputs">
             <section class="inputs">
                 <p class="name"></p>
-                <input type="text" name="name" [(ngModel)]="name" required A-Za-z>
+                <input type="text" name="name" [(ngModel)]="name" required minlength="3">
                 <p class="email"></p>
                 <input type="email" name="email" [(ngModel)]="email" required>
                 <p class="number"></p>
-                <input type="text" name="number" [(ngModel)]="number" >
+                <input type="tel" name="number" [(ngModel)]="number">
             </section>
-            <section>
+            <section class="buttonClass">
                 <p class="additional"></p>
                 <textarea name="info" id="" cols="30" rows="10" wrap="soft" required [(ngModel)]="info"></textarea>
+            
             </section>
-            <input type="submit"  class="submit-button" value='Send' >
+            <p class="inputError" *ngIf="someFieldEmpty">
+                Please fill all required fields!
+            </p>
+            <input type="submit" class="submit-button" [value]='sendStatus'>
         </section>
     </form>
 </body>
 
+<div *ngIf="hideForm" class="success-result">
+    <p>Thanks!</p>
+    <p>Your message has sent successfully!</p>
+    <i class="fa-solid fa-circle-check"></i>
+</div>

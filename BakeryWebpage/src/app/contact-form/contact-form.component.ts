@@ -11,6 +11,8 @@ export class ContactFormComponent implements OnInit {
   number: number | string = ''
   info: string = ''
   hideForm: string = ''
+  sendStatus: string = 'Send'
+  someFieldEmpty: boolean = false
   constructor() { }
 
   ngOnInit(): void {
@@ -19,6 +21,7 @@ export class ContactFormComponent implements OnInit {
   public onSubmit(e: Event) {
     if (this.name && this.email && this.info !== '') {
       e.preventDefault();
+      this.sendStatus = 'Sending...'
       emailjs.sendForm('service_v9cqahs', 'template_75bkjcj', e.target as HTMLFormElement, 'QklSpd4CPoE0j1orE')
 
         .then((result: EmailJSResponseStatus) => {
@@ -28,11 +31,17 @@ export class ContactFormComponent implements OnInit {
             this.number = ''
             this.info = ''
             this.hideForm = 'hidden'
+            
           }
         })
     } else {
-      alert('message not sent')
+      this.someFieldEmpty= true
+      setTimeout(()=> {
+        this.someFieldEmpty = false
+      }, 3000)
     }
   }
+
+  
 }
 

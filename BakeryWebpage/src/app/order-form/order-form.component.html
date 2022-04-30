@@ -1,0 +1,27 @@
+<body>
+    <form (submit)="onOrderSubmit()">
+        <section class="contact-inputs">
+            <section class="inputs">
+                <p class="name"></p>
+                <input type="text" name="name" [(ngModel)]="name" required minlength="3">
+                <p class="email"></p>
+                <input type="email" name="email" [(ngModel)]="email" requred>
+                <p class="number"></p>
+                <input type="tel" name="number" [(ngModel)]="number">
+                <p class=""></p>
+                <select name="Categories" id="" (change)="onLoadSelected($event.target)">
+                    <option *ngFor="let c of category" [ngValue]="c">{{c.name}}</option>
+                </select>
+                <select *ngIf="optionCakes" name="">
+                    <option *ngFor="let cake of cakeSelection" value="">{{cake.name}}</option>
+                  </select>
+
+            </section>
+            
+            <p class="inputError" *ngIf="someFieldEmpty">
+                Please fill all required fields!
+            </p>
+            <input type="submit" class="submit-button" [value]='sendStatus'>
+        </section>
+    </form>
+</body>
