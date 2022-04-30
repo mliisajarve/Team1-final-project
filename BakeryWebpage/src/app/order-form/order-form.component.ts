@@ -11,7 +11,7 @@ export class OrderFormComponent implements OnInit {
   number: number|string = ''
   someFieldEmpty: boolean = false
   sendStatus: string = 'Send'
-  
+
   optionCakes: boolean = false
   category = [{name: 'Please choose category'},{name: 'Cake'}, {name: 'Pretzels'}, {name: 'Rolls'}]
   cakeSelection = [{name: 'Kook1'}, {name: 'Kook2'}, {name: 'Kook3'}]
