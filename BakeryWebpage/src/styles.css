@@ -1,3 +1,9 @@
+:root {
+    --header-footer-dark: rgba(222, 182, 159, 1);
+    --header-footer-light: rgba(245, 239, 229, 1);
+    --black: rgba(0,0,0,1);
+    --white: rgba(255, 255, 255, 1);
+}
 
 * {
     margin: 0;

@@ -1,0 +1,49 @@
+body {
+    background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url(../../assets/images/Background-cakes-color.png);
+    position: relative;
+    top: 0px;
+    min-height: 100vh;
+    margin-bottom: 0px;
+}
+
+.front-div {
+    background-color: var(--header-footer-light);
+    min-height: 100vh;
+    margin: 0px 200px 0 200px;
+    padding: 20px 70px 150px 70px;
+    text-align: center;
+    font-family: 'Indie Flower', sans-serif;
+    
+}
+
+.welcome-header {
+    padding: 50px;
+    font-size: xx-large;
+}
+
+.welcome-text {
+    line-height: 50px;
+    font-size: x-large;
+}
+
+.welcome-text a {
+    color: var(--black);
+}
+
+.welcome-text a:hover {
+    font-size: larger;
+    font-weight: 700;
+}
+
+.carousel{
+    margin-top: 80px;
+}
+
+.feedback-div {
+    width: 100%;
+    margin-top: 100px;
+    font-size: x-large;
+    background-color: rgba(255,255,255,.4);
+    border-radius: 20px;
+    padding: 40px;
+}

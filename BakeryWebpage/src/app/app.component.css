@@ -1,8 +1,8 @@
 main{
     position: relative;
-    top: 250px;
+    top: 200px;
     min-height: 95vh;
-    margin-bottom: 250px;
+    margin-bottom: 0px;
 }
 
 @media screen  and (max-width: 425px) {

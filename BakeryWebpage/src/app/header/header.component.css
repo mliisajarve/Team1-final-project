@@ -1,6 +1,6 @@
 header {
     height: 200px;
-    background: linear-gradient(rgba(207, 157, 182, 1),  rgba(255, 255, 255, 1));
+    background: linear-gradient(var(--header-footer-dark),  var(--header-footer-light));
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,7 +8,6 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1;
-  /*   box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.2); */
 }
 
 .header-logo {
@@ -31,7 +30,7 @@ header {
 
  a {
     margin-bottom: 0px;
-    color: black;
+    color: var(--black);
     text-decoration: none;
     font-size: 23px;
     font-weight: 700;
@@ -45,7 +44,7 @@ header {
     content: '';
     width: 50%;
     height: 3px;
-    background-color: rgba(207, 157, 182, 1);
+    background-color: var(--header-footer-dark);
     display: block;
     position: relative;
     left: 25%;
@@ -53,7 +52,7 @@ header {
 }
 
 .navbar a:visited {
-    color: black;
+    color: var(--black);
     text-decoration: none;
 }
 
@@ -106,7 +105,7 @@ header {
       }
       
       .topnav a {
-        color: black;
+        color: var(--black);
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
@@ -114,7 +113,7 @@ header {
       }
       
       .hidden-nav a.icon {
-        background: rgba(255, 255, 255, 0.3);
+        background: var(--white);
         border-radius: 100px;
         width: 40px;
         height: 40px;
@@ -127,7 +126,7 @@ header {
       }
       
       .hidden-nav a:hover {
-        box-shadow: 1px 1px 15px rgba(255, 255, 255, 1);
+        box-shadow: 1px 1px 15px var(--white);
       }
     
 }
