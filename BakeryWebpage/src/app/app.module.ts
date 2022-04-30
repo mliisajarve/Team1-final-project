@@ -12,6 +12,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { SocialMediaComponent } from './social-media/social-media.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
