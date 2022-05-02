@@ -20,18 +20,12 @@ export class ContactFormComponent implements OnInit {
   }
   public onSubmit(e: Event) {
     if (this.name && this.email && this.info !== '') {
-      e.preventDefault();
       this.sendStatus = 'Sending...'
       emailjs.sendForm('service_v9cqahs', 'template_75bkjcj', e.target as HTMLFormElement, 'QklSpd4CPoE0j1orE')
 
         .then((result: EmailJSResponseStatus) => {
           if (result.text == 'OK') {
-            this.name = ''
-            this.email = ''
-            this.number = ''
-            this.info = ''
             this.hideForm = 'hidden'
-            
           }
         })
     } else {

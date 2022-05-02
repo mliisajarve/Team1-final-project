@@ -1,5 +1,5 @@
 body{
-    height: 500px;
+    min-height: 500px;
     width: 600px;
     box-shadow: 2px 2px 40px 5px rgb(190, 177, 184); ;
     border-radius: 20px;
@@ -80,14 +80,14 @@ p.additional::after{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 1),rgba(207, 157, 182, 1));
+    background: linear-gradient(var(--header-footer-light),var(--header-footer-dark));
     height: 40px;
     min-width: 50px;
     border-radius: 10px;
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .submit-button:hover {
     cursor: pointer;
@@ -149,5 +149,6 @@ p.additional::after{
     flex-direction: row;
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 15px;
+    color: red;
 }

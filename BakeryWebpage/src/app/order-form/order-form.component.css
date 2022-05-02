@@ -27,20 +27,20 @@ input{
     border-radius: 10px;
     border: 1px solid rgb(171, 147, 147);
 }
-textarea:hover, input:not(.submit-button):hover{
+textarea{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 400px;
+    border: 1px solid rgb(171, 147, 147)
+}
+textarea:hover, input:not(.submit-button):hover,.select-category:hover, .select-product:hover{
     cursor: pointer;
     border: 1px solid rgba(130, 193, 216, 0.6);
 }
 
-input:not(.submit-button):focus{
+input:not(.submit-button):focus, textarea:focus{
     border: none;
-    outline: 2px solid rgb(130, 193, 216);
-}
-textarea{
-    margin: 0;
-    border-radius: 10px;
-    width: 350px;
-    border: 1px solid rgb(171, 147, 147)
+    outline: 3px solid rgb(130, 193, 216);
 }
 
 p::after {
@@ -67,17 +67,56 @@ p.number::after{
     content: 'Number';
     width: 71px;
 }
-p.additional::after{
-    content: 'Feedback/questions*';
-    width: 175px;
+p.amount::after{
+    content: 'Amount*';
+    width: 71px;
 }
+p.additional::after {
+    content: 'If you have any additional wish, then add it below';
+    display: inline;
+    top: 5px;
+}
+p.date::after{
+    content: 'Reciving an order';
+    top: -2px;
+    margin-top: 10px;
+}
+.selection{
+    display: flex;
+    flex-direction: column;
+}
+
+.select-category, .select-product{
+    height: 36px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid rgb(171, 147, 147);
+    font-family: 'Indie Flower', cursive; ;
+    font-weight: 600 ;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: rgba(245, 245, 220, 0.466) ;
+}
+
+option{
+    font-family: 'Indie Flower', cursive; ;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center; 
+}
+
+/* .select-product{
+
+} */
 
 
 .submit-button{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 1),rgba(207, 157, 182, 1));
+    background: linear-gradient(var(--header-footer-dark),  var(--header-footer-light));
     height: 40px;
     min-width: 50px;
     border-radius: 10px;
@@ -91,4 +130,61 @@ p.additional::after{
 }
 .submit-button:active{
    transform: scale(0.9);
+   background: linear-gradient(var(--header-footer-light),var(--header-footer-dark)  );
+   
+}
+@keyframes hideMe {
+    from {
+        opacity: 1.0;
+        visibility: visible;
+    }
+    to {
+        opacity: 0.0;
+        visibility: hidden;
+        
+    }
+}
+.hidden {
+    animation-name: hideMe;
+    animation-duration: 1s;
+    visibility: hidden;
+    animation-timing-function: ease-in;
+}
+
+@keyframes resultShow {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1.0;
+}
+}
+.success-result {
+    text-align: center;
+    padding: 15px;
+    height: 200px;
+    animation-name: resultShow;
+    animation-duration: 2s;
+    position:relative;
+    bottom: 50%;
+    background-color: rgb(235, 235, 235, 0.662);
+    border-radius: 10px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+.fa-solid {
+    margin-top: 20px;
+    color: rgb(29, 226, 29);
+    font-size: 50px;
+}
+
+.inputError{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    margin-top: 5px;
 }

@@ -1,6 +1,15 @@
 
 <body>
-    <section class="form">
+    <section class="form-button">
+        <div (click)="onOrderButton()" class="order-button">
+            Order, nupud pooleli aga funksivad
+        </div>
+        <div (click)="onContactButton()" class="contact-button">
+            Contact
+        </div>
+
+    </section>
+    <section *ngIf="buttonClicked" class="form">
         <app-contact-form *ngIf="formOption"></app-contact-form>
         
         <app-order-form *ngIf="!formOption"></app-order-form>

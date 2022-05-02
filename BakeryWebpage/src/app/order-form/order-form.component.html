@@ -1,5 +1,5 @@
-<body>
-    <form (submit)="onOrderSubmit()">
+<body [class] = "hideForm">
+    <form (submit)="onOrderSubmit($event)">
         <section class="contact-inputs">
             <section class="inputs">
                 <p class="name"></p>
@@ -7,17 +7,27 @@
                 <p class="email"></p>
                 <input type="email" name="email" [(ngModel)]="email" required>
                 <p class="number"></p>
-                <input type="tel" name="number" [(ngModel)]="number">
+                <input type="text" name="number" [(ngModel)]="number">
                 <p class=""></p>
-                <select name="Categories" id="" (change)="onLoadSelected($event.target)">
-                    <option *ngFor="let c of category" [ngValue]="c">{{c.name}}</option>
-                </select>
-                <select *ngIf="optionCakes" name="">
-                    <option *ngFor="let cake of cakeSelection" value="">{{cake.name}}</option>
-                  </select>
+
+                <section class="selection">
+                    <select name="categories" class="select-category" (change)="onLoadSelected($event.target)" [(ngModel)]="selCategory">
+                        <option *ngFor="let c of category">{{c.name}}</option>
+                    </select>
+
+                    <select name="selection" class="select-product" *ngIf="isCategorySelected"  [(ngModel)]="selProduct">
+                        <option name="selection" class="option" *ngFor="let any of cakePretzelRolls" value="">{{any.name}}</option>
+                    </select>
+                </section>
+                <p class="amount"></p>
+                <input type="text" name="amount" [(ngModel)]="amount" required="required">
+                <p class="date"></p>
+                <input type="date" name="date" [(ngModel)]="date">
 
             </section>
-            
+            <p class="additional"></p>
+            <textarea name="info" id="" cols="30" rows="10" wrap="soft" required [(ngModel)]="info"></textarea>
+
             <p class="inputError" *ngIf="someFieldEmpty">
                 Please fill all required fields!
             </p>
@@ -25,3 +35,8 @@
         </section>
     </form>
 </body>
+<div *ngIf="hideForm" class="success-result">
+    <p>Thanks!</p>
+    <p>Your order has been sent successfully!</p>
+    <i class="fa-solid fa-circle-check"></i>
+</div>
