@@ -3,6 +3,7 @@ main{
     top: 150px;
     min-height: 95vh;
     margin-bottom: 0px;
+    background-color: var(--header-footer-light);
 }
 
 @media screen  and (max-width: 425px) {

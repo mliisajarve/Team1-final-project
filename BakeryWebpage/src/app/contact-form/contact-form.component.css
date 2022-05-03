@@ -1,8 +1,24 @@
+@keyframes visibility {
+    from{
+       transform: scale(0.4);
+        opacity: 0.1;
+        visibility: hidden;
+    }
+    to{
+        transform: scale(1.0);
+        opacity: 1.0;
+        visibility: visible;
+    }
+}
+
+
 body{
     min-height: 500px;
     width: 600px;
     box-shadow: 2px 2px 40px 5px rgb(190, 177, 184); ;
     border-radius: 20px;
+    animation: visibility;
+    animation-duration: 2s;
 }
 body::before{
     display: flex;
@@ -53,7 +69,6 @@ p::after {
     position: relative;
     top: 2px;
     left: 10px;
-    background-color: white;
 }
 p.name::after{
     content: 'Name*';
@@ -87,7 +102,7 @@ p.additional::after{
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-top: 40px;
+    margin-top: 35px;
 }
 .submit-button:hover {
     cursor: pointer;
@@ -149,6 +164,6 @@ p.additional::after{
     flex-direction: row;
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 25px;
     color: red;
 }

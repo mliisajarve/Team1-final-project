@@ -9,7 +9,7 @@
 .social-media-icons img {
     transition: transform 0.3s, box-shadow 1s;
     border-radius: 50%;
-    height: 75px;
+    height: 90px;
 }
 
 .social-media-icons img:hover{

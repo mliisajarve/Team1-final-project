@@ -8,15 +8,16 @@
                 <input type="email" name="email" [(ngModel)]="email" required>
                 <p class="number"></p>
                 <input type="text" name="number" [(ngModel)]="number">
-                <p class=""></p>
-
+                
+                
+                <p class="category-selection"></p>
                 <section class="selection">
                     <select name="categories" class="select-category" (change)="onLoadSelected($event.target)" [(ngModel)]="selCategory">
                         <option *ngFor="let c of category">{{c.name}}</option>
                     </select>
-
-                    <select name="selection" class="select-product" *ngIf="isCategorySelected"  [(ngModel)]="selProduct">
-                        <option name="selection" class="option" *ngFor="let any of cakePretzelRolls" value="">{{any.name}}</option>
+                    <p *ngIf="isCategorySelected" class="product-selection"></p>
+                    <select name="selection" class="select-product"  *ngIf="isCategorySelected"  [(ngModel)]="selProduct">
+                        <option  class="option" *ngFor="let any of cakePretzelRolls" >{{any.name}}</option>
                     </select>
                 </section>
                 <p class="amount"></p>

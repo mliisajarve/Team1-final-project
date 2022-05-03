@@ -1,22 +1,28 @@
-
 <body>
-    <section class="form-button">
-        <div (click)="onOrderButton()" class="order-button">
-            Order, nupud pooleli aga funksivad
-        </div>
-        <div (click)="onContactButton()" class="contact-button">
-            Contact
-        </div>
+    <section class="selection-buttons">
+        <p class="select-approach"><i class="fa-solid fa-comments"></i> Please select the type of approach <i
+                class="fa-solid fa-comments"></i></p>
+
+        <section class="form-button">
+            <div (click)="onOrderButton()" class="order-button">
+                <p>Make an order <i class="fa-solid fa-utensils"></i> </p>
+            </div>
+
+            <div (click)="onContactButton()" class="contact-button">
+                <p>Contact me <i class="fa-solid fa-address-book"></i></p>
+            </div>
+        </section>
 
     </section>
+
     <section *ngIf="buttonClicked" class="form">
         <app-contact-form *ngIf="formOption"></app-contact-form>
-        
+
         <app-order-form *ngIf="!formOption"></app-order-form>
     </section>
 
     <section class="social-media">
-       <app-social-media></app-social-media>
+        <app-social-media></app-social-media>
     </section>
 
 </body>

@@ -20,7 +20,7 @@ export class OrderFormComponent implements OnInit {
   someFieldEmpty: boolean = false
   sendStatus: string = 'Send'
 
-  category = [{name: 'Please choose category'},{name: 'Cakes'}, {name: 'Pretzels'}, {name: 'Rolls'}]
+  category = [{name: '--------'},{name: 'Cakes'}, {name: 'Pretzels'}, {name: 'Rolls'}]
   isCategorySelected: boolean = false
   cakePretzelRolls: any
   
@@ -32,11 +32,14 @@ export class OrderFormComponent implements OnInit {
   ngOnInit(): void {
   }
 public onOrderSubmit(e:Event) {
-  if(this.name && this.email && this.selCategory && this.date && this.amount !== '') {
+  
+  if(this.name && this.email && this.selCategory && this.selProduct && this.date && this.amount !== '' ) {
+    this.sendStatus = 'Sending...'
     emailjs.sendForm('service_v9cqahs','template_ayeznks', e.target as HTMLFormElement, 'QklSpd4CPoE0j1orE')
     .then((result: EmailJSResponseStatus) => {
       if(result.text === 'OK') {
         this.hideForm = "hidden"
+        
       }
     })
   } else {
@@ -52,7 +55,6 @@ onLoadSelected(selected:any) {
 switch(selected.value) {
   case 'Cakes' :
     this.cakePretzelRolls = [{name: 'Kook1'}, {name: 'Kook2'}, {name: 'Kook3'}]
-    alert(this.cakePretzelRolls.name)
     break;
   case 'Pretzels' :
      this.cakePretzelRolls = [{name:'Kringel1'}, {name:'Kringel2'}, {name:'Kringel3'}]
@@ -61,7 +63,9 @@ switch(selected.value) {
     this.cakePretzelRolls = [{name:'Saiake1'}, {name:'Saiake2'}, {name:'Saiake3'}]
     break;
 }
-
+return this.cakePretzelRolls 
 
 }
+
+
 }
