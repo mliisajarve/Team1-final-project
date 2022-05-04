@@ -5,7 +5,12 @@
     </div>
     <nav class="navbar">
         <a aria-current="page" routerLink="/">Home</a>
-        <a aria-current="page" routerLink="/products">Products</a>
+        <a (click)="onProducts()" class="dropdown" aria-current="page">Products <i class="fa fa-caret-down"></i></a>
+                <div [ngClass]="[dropdownStatus]" >
+                  <a routerLink="/cakes">Cakes</a>
+                  <a routerLink="/bagels">Bagels</a>
+                  <a routerLink="/pastry">Pastry</a>
+                </div>
         <a aria-current="page" routerLink="/contact">Contacts</a>
         <a aria-current="page"><i class="fa-solid fa-magnifying-glass"></i></a>
     </nav>
@@ -13,7 +18,12 @@
     <div class="hidden-nav">
         <div id="navLinks">
             <a aria-current="page" routerLink="/">Home</a>
-            <a aria-current="page" routerLink="/products">Products</a>
+            <a class="dropdown" aria-current="page">Products <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
             <a aria-current="page" routerLink="/contact">Contacts</a>
             <a aria-current="page"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>

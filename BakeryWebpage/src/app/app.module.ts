@@ -15,6 +15,9 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { TordidComponent } from './tordid/tordid.component';
+import { KringlidComponent } from './kringlid/kringlid.component';
+import { SaiakesedComponent } from './saiakesed/saiakesed.component';
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import { BrowserModule } from '@angular/platform-browser';
     ContactPageComponent,
     ContactFormComponent,
     OrderFormComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    TordidComponent,
+    KringlidComponent,
+    SaiakesedComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+   
+dropdownStatus = 'dropdown-content';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onProducts() {
+   if(this.dropdownStatus == 'dropdown-content') {
+     this.dropdownStatus = 'dropdown-show';
+   } else {
+     this.dropdownStatus = 'dropdown-content';
+   }
   }
 
   /* hideShowNav() : void {
