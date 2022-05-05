@@ -1,6 +1,6 @@
 @keyframes page-visibility {
     from{
-      
+        
         opacity: 0;
         visibility: hidden;
     }
@@ -18,30 +18,42 @@ body{
     animation-duration: 2s;
     padding-bottom: 100px;
 }
-
+/* content before buttons */
+.select-approach{
+    font-family: 'Indie Flower', cursive;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+/* form positioning */
 .form{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     position: relative;
-    top:100px
+    top:100px;
     
 }
+/* social media box positioning */
 .social-media{
     display: flex;
     position: relative;
     left:10% ;
     width: 80%;
+    right: 10%;
     min-height: 150px;
     flex-wrap: wrap;
     border-radius: 25px;
     box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.2);
     margin-top: 250px;
+    flex-shrink: 2;
 }
-
-
-
-
+/* whole buttons section */
+.selection-buttons{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
 
 
 /* Form select buttons */
@@ -50,7 +62,7 @@ body{
     justify-content: space-evenly;
     
 }
-
+/* make order and contact buttons */
 .order-button, .contact-button{
     display: flex;
     justify-content: center;
@@ -59,8 +71,8 @@ body{
     font-size: 20px;
     font-weight: bold;
     background: linear-gradient(to top right,var(--header-footer-dark), white,var(--header-footer-light)) ;
-    height: 75px;
-    width: 170px;
+    height: 125px;
+    width: 200px;
     cursor: pointer;
     border-radius: 30%;
     border: 2px dotted var(--header-footer-dark);
@@ -70,26 +82,40 @@ body{
 .order-button:active, .contact-button:active {
     box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
     transform: scale(0.9);
+    background: linear-gradient(to top right, var(--header-footer-light), white, var(--header-footer-dark) );
 }
 
 .order-button:hover, .contact-button:hover {
     text-decoration: underline;
     font-size: 22px;
 }
-.selection-buttons{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
+
 
 i{
     color: rgba(255, 68, 0, 0.548);
     font-size: 25px;
 }
-.select-approach{
-    font-family: 'Indie Flower', cursive;
-    font-size: 28px;
-    font-weight: bold;
-    text-decoration: underline;
-    margin-bottom: 40px;
+/* mobile version */
+
+@media screen and (max-width: 525px) {
+    .form-button{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+    }
+    .order-button, .contact-button{
+        border-radius: 30px;
+        width: 80%;
+        border: none;
+        height: 75px;
+    }
+    .select-approach{
+        font-size: 23px;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+    
+
 }

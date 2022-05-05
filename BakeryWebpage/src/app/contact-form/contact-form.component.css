@@ -23,13 +23,14 @@ body{
 body::before{
     display: flex;
     justify-content: center;
-    content: 'Form for Your feedback or questions';
+    content: 'Your feedback or questions';
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 2px;
     text-decoration: underline;
     margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 .contact-inputs {
@@ -38,7 +39,7 @@ body::before{
     align-items: center;
 }
 input{
-    height: 30px;
+    height: 35px;
     width: 200px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -67,8 +68,10 @@ p::after {
     font-weight: bold;
     letter-spacing: 2px;
     position: relative;
-    top: 2px;
+    top: 1px;
     left: 10px;
+    font-size: 20px ;
+    background: var(--header-footer-light);
 }
 p.name::after{
     content: 'Name*';
@@ -96,16 +99,20 @@ p.additional::after{
     align-items: center;
     justify-content: center;
     background: linear-gradient(var(--header-footer-light),var(--header-footer-dark));
-    height: 40px;
+    height: 50px;
     min-width: 50px;
     border-radius: 10px;
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
     letter-spacing: 2px;
     margin-top: 35px;
+    font-size: 19px;
+    transition: box-shadow 0.1s ease-out;
 }
 .submit-button:hover {
     cursor: pointer;
+    text-decoration: underline;
+    box-shadow: 0px 0px 10px 2px rgb(190, 177, 184)
 }
 .submit-button:active{
    transform: scale(0.9);
@@ -166,4 +173,42 @@ p.additional::after{
     font-weight: bold;
     margin-top: 25px;
     color: red;
+    font-size: 19px;
+}
+
+@media screen and (max-width: 525px) {
+    body{
+        width: 325px;
+    }
+    body::before{
+        font-size: 17px;
+    }
+    p::after{
+        font-size: 15px;
+    }
+    input{
+        height: 30px;
+    }
+    .submit-button{
+        height: 45px;
+        font-size: 15px;
+        border-radius: 15px;
+    }
+    textarea{
+        width: 300px;
+    }
+    @keyframes formOpening2{
+        from{
+            transform: translate(0px, -170px) ;
+        }
+        to{
+            transform: translate(0px, 0px);
+        }
+
+    }
+    body{
+        animation: formOpening2;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
 }

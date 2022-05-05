@@ -23,14 +23,17 @@ body{
 body::before{
     display: flex;
     justify-content: center;
-    content: 'Ordering form';
+    content: 'Enter Your order';
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 2px;
     text-decoration: underline;
     margin-bottom: 20px;
+    padding-top: 20px;
 }
+
+/* input block */
 .contact-inputs {
     display: flex;
     flex-direction: column;
@@ -66,21 +69,26 @@ p::after {
     font-weight: bold;
     letter-spacing: 2px;
     position: relative;
-    top: 2px;
+    top: 1px;
     left: 10px;
-    
+    font-size: 20px ;
+    background: var(--header-footer-light);
 }
 p.name::after{
     content: 'Name*';
+    width: 60px;
 }
 p.email::after{
     content: 'Email*';
+    width: 65px;
 }
 p.number::after{
     content: 'Number';
+    width: 75px;
 }
 p.amount::after{
     content: 'Amount* (kg)';
+    width: 140px;
 }
 p.additional::after {
     content: 'If you have any additional wish, then add it below';
@@ -100,6 +108,8 @@ p.product-selection::after{
     content: "Choose product*";
     top: 15px;
 }
+
+/* selection menus*/
 .selection{
     display: flex;
     flex-direction: column;
@@ -126,32 +136,36 @@ option{
     text-align: center; 
 }
 
-/* .select-product{
-
-} */
-
+/* submit button */
 
 .submit-button{
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(var(--header-footer-dark),  var(--header-footer-light));
-    height: 40px;
+    height: 50px;
     min-width: 50px;
     border-radius: 10px;
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
     letter-spacing: 2px;
     margin-top: 20px;
+    font-size: 19px;
+    transition: box-shadow 0.1s ease-out;
 }
 .submit-button:hover {
     cursor: pointer;
+    text-decoration: underline;
+    box-shadow: 0px 0px 10px 2px rgb(190, 177, 184);
+
 }
 .submit-button:active{
    transform: scale(0.9);
    background: linear-gradient(var(--header-footer-light),var(--header-footer-dark)  );
    
 }
+
+/* form hiding, if message is sent */
 @keyframes hideMe {
     from {
         opacity: 1.0;
@@ -170,6 +184,7 @@ option{
     animation-timing-function: ease-in;
 }
 
+/* success sending, feedback box */
 @keyframes resultShow {
     from{
         opacity: 0;
@@ -193,13 +208,14 @@ option{
     font-weight: 500;
 }
 
-
+/* icon styling */
 .fa-solid {
     margin-top: 20px;
     color: rgb(29, 226, 29);
     font-size: 50px;
 }
 
+/* if required inputs arent filled */
 .inputError{
     display: flex;
     flex-direction: row;
@@ -207,4 +223,46 @@ option{
     font-weight: bold;
     margin-top: 5px;
     color: red;
+    font-size: 19px;
+}
+
+/* mobile version */
+
+@media screen and (max-width: 525px) {
+    body{
+        width: 325px;
+    }
+    body::before{
+        font-size: 17px;
+    }
+    p::after{
+        font-size: 15px;
+    }
+    input{
+        height: 30px;
+    }
+    .submit-button{
+        height: 45px;
+        font-size: 15px;
+        border-radius: 15px;
+    }
+    textarea{
+        width: 300px;
+    }
+    @keyframes formOpening{
+        from{
+            transform: translate(0px, -275px) ;
+            z-index: -1;
+        }
+        to{
+            transform: translate(0px, 0px);
+            z-index: 0;
+        }
+
+    }
+    body{
+        animation: formOpening;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
 }

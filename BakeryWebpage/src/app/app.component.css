@@ -8,7 +8,7 @@ main{
 
 @media screen  and (max-width: 425px) {
     main{
-        top: 200px;
+        top: 150px;
     }
     
 }

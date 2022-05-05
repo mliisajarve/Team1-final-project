@@ -20,7 +20,7 @@ export class OrderFormComponent implements OnInit {
   someFieldEmpty: boolean = false
   sendStatus: string = 'Send'
 
-  category = [{name: '--------'},{name: 'Cakes'}, {name: 'Pretzels'}, {name: 'Rolls'}]
+  category = [{name: '--------'},{name: 'Cakes'}, {name: 'Bagels'}, {name: 'Pastry'}]
   isCategorySelected: boolean = false
   cakePretzelRolls: any
   
