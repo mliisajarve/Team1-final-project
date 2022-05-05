@@ -30,4 +30,15 @@ export class MainPageComponent implements OnInit {
     { path: '../../assets/images/two-cake.png' },
     { path: '../../assets/images/vastlakukkel.png' }
   ];
+
+  feedbacks = [
+      {content: 'Hello',
+      name: 'Alina'},
+      {content: 'Good',
+      name: 'Paul'},
+      {content: 'Yess',
+      name: 'Liisa'},
+      {content: 'Food',
+      name: 'Mike'},
+  ]
 }

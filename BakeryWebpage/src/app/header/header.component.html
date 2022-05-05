@@ -5,12 +5,14 @@
     </div>
     <nav class="navbar">
         <a aria-current="page" routerLink="/">Home</a>
-        <a (click)="onProducts()" class="dropdown" aria-current="page">Products <i class="fa fa-caret-down"></i></a>
-                <div [ngClass]="[dropdownStatus]" >
+        <div class="dropdown">
+          <a aria-current="page">Products <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content" >
                   <a routerLink="/cakes">Cakes</a>
                   <a routerLink="/bagels">Bagels</a>
                   <a routerLink="/pastry">Pastry</a>
                 </div>
+        </div>
         <a aria-current="page" routerLink="/contact">Contacts</a>
         <a aria-current="page"><i class="fa-solid fa-magnifying-glass"></i></a>
     </nav>

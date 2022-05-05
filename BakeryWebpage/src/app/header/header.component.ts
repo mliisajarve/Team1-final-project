@@ -15,14 +15,6 @@ dropdownStatus = 'dropdown-content';
   ngOnInit(): void {
   }
 
-  onProducts() {
-   if(this.dropdownStatus == 'dropdown-content') {
-     this.dropdownStatus = 'dropdown-show';
-   } else {
-     this.dropdownStatus = 'dropdown-content';
-   }
-  }
-
   /* hideShowNav() : void {
     let x = document.getElementById("myLinks");
     if (x.style.display === "block") {
