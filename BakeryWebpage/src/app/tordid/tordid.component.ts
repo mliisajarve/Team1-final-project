@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../models/product';
+import { TordidService } from '../services/tordid.service';
 
 @Component({
   selector: 'app-tordid',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TordidComponent implements OnInit {
 
-  constructor() { }
+  constructor(private allCakes: TordidService ) { }
+  values = this.allCakes.sendAllCakes()
+  cakes: Product[] = []
+
 
   ngOnInit(): void {
+    this.cakes = this.values
   }
+
 
 }

@@ -18,6 +18,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { TordidComponent } from './tordid/tordid.component';
 import { KringlidComponent } from './kringlid/kringlid.component';
 import { SaiakesedComponent } from './saiakesed/saiakesed.component';
+import { SingleProductComponent } from './single-product/single-product.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { SaiakesedComponent } from './saiakesed/saiakesed.component';
     SocialMediaComponent,
     TordidComponent,
     KringlidComponent,
-    SaiakesedComponent
+    SaiakesedComponent,
+    SingleProductComponent
   ],
   imports: [
     BrowserModule,

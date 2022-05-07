@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../models/product';
+import { SaiakesedService } from '../services/saiakesed.service';
 
 @Component({
   selector: 'app-saiakesed',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./saiakesed.component.css']
 })
 export class SaiakesedComponent implements OnInit {
-
-  constructor() { }
+  values = this.pastry.sendAllPastries()
+  pastries: Product[] = []
+  constructor(private pastry: SaiakesedService ) { }
 
   ngOnInit(): void {
+    this.pastries= this.values
   }
 
 }
