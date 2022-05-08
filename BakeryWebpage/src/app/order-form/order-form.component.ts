@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { Product } from '../models/product';
+import { KringlidService } from '../services/kringlid.service';
+import { SaiakesedService } from '../services/saiakesed.service';
+import { TordidService } from '../services/tordid.service';
 
 @Component({
   selector: 'app-order-form',
@@ -24,13 +28,12 @@ export class OrderFormComponent implements OnInit {
   isCategorySelected: boolean = false
   cakePretzelRolls: any
   
-  /* cakes: string ='' // needs model and service sheet to import all cakes
-  pretzels: string =''
-  rolls: string = '' */
-  constructor() { }
+
+  constructor(private allCakeNames: TordidService, private allBagelNames: KringlidService, private allPastryNames: SaiakesedService) { }
 
   ngOnInit(): void {
   }
+  
 public onOrderSubmit(e:Event) {
   
   if(this.name && this.email && this.selCategory && this.selProduct && this.date && this.amount !== '' ) {
@@ -39,7 +42,6 @@ public onOrderSubmit(e:Event) {
     .then((result: EmailJSResponseStatus) => {
       if(result.text === 'OK') {
         this.hideForm = "hidden"
-        
       }
     })
   } else {
@@ -50,17 +52,18 @@ public onOrderSubmit(e:Event) {
   }
 }
 
+// getting all product names from service sheets
 onLoadSelected(selected:any) {
  this.isCategorySelected = true
 switch(selected.value) {
   case 'Cakes' :
-    this.cakePretzelRolls = [{name: 'Kook1'}, {name: 'Kook2'}, {name: 'Kook3'}]
+    this.cakePretzelRolls = this.allCakeNames.sendAllCakes()
     break;
-  case 'Pretzels' :
-     this.cakePretzelRolls = [{name:'Kringel1'}, {name:'Kringel2'}, {name:'Kringel3'}]
+  case 'Bagels' :
+     this.cakePretzelRolls = this.allBagelNames.sendAllBagels()
      break;
-  case 'Rolls' :
-    this.cakePretzelRolls = [{name:'Saiake1'}, {name:'Saiake2'}, {name:'Saiake3'}]
+  case 'Pastry' :
+    this.cakePretzelRolls = this.allPastryNames.sendAllPastries()
     break;
 }
 return this.cakePretzelRolls 

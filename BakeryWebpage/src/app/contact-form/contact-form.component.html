@@ -1,4 +1,4 @@
-<body [class]='hideForm'>
+<div [class]='hideForm' class="body">
     <form class="contact-form" (submit)="onSubmit($event)">
         <section class="contact-inputs">
             <section class="inputs">
@@ -20,10 +20,10 @@
             <input type="submit" class="submit-button" [value]='sendStatus'>
         </section>
     </form>
-</body>
+</div>
 
 <div *ngIf="hideForm" class="success-result">
     <p>Thanks!</p>
     <p>Your message has been sent successfully!</p>
-    <i class="fa-solid fa-circle-check"></i>
+    <img src="../../assets/Icons/circle-check-regular.svg" alt="">
 </div>

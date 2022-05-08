@@ -20,65 +20,72 @@ export class TordidService {
    {  
       id: 2,
       imageUrl: '../../assets/Products/tordid/Blondie, gluteeni-laktoosivaba.jpg',
-      name: 'Blondie',
+      name: 'Blondie cake',
       glutenFree: true,
-      lactoseFree: false,
+      lactoseFree: true,
       mainComponents: 'komponendid ',
-      price: 10
+      price: 10,
+      keywords: ''
   },
    {  
       id: 3,
       imageUrl: '../../assets/Products/tordid/Kohvikook_apelsinikook.jpg',
-      name: 'Kohvi-apelsinikook',
-      glutenFree: true,
+      name: 'Coffee-orange cake',
+      glutenFree: false,
       lactoseFree: false,
       mainComponents: 'komponendid ',
-      price: 10
+      price: 10,
+      keywords: ''
   },
    {  
       id: 4,
       imageUrl: '../../assets/Products/tordid/küpsisetort.jpg',
-      name: 'KÜpsisetort',
-      glutenFree: true,
+      name: 'Cookie cake',
+      glutenFree: false,
       lactoseFree: false,
       mainComponents: 'komponendid ',
-      price: 10
+      price: 10,
+      keywords: ''
   },
    {  
       id: 5,
       imageUrl: '../../assets/Products/tordid/linnupiimatort.jpg',
-      name: 'Linnupiimatort',
-      glutenFree: true,
+      name: 'Bird milk cake',
+      glutenFree: false,
       lactoseFree: false,
       mainComponents: 'komponendid ',
-      price: 10
+      price: 10,
+      keywords: ''
   },
    {  
       id: 6,
       imageUrl: '../../assets/Products/tordid/MAASIKATORT.jpg',
-      name: 'Maasikatort',
-      glutenFree: true,
+      name: 'Strawberry cake',
+      glutenFree: false,
       lactoseFree: false,
       mainComponents: 'komponendid ',
-      price: 10
+      price: 10,
+      keywords: ''
   },
    {  
       id: 7,
       imageUrl: '../../assets/Products/tordid/Mustika tort- laktoosi,gluteeni vaba.jpg',
-      name: 'Mustika tort- laktoosi,gluteeni vaba',
+      name: 'Blueberry cake',
       glutenFree: true,
-      lactoseFree: false,
+      lactoseFree: true,
       mainComponents: 'komponendid ',
-      price: 10
+      price: 10,
+      keywords: ''
   },
    {  
       id: 8,
       imageUrl: '../../assets/Products/tordid/vanillitort.jpg',
-      name: 'Vanillitort',
-      glutenFree: true,
+      name: 'Vanilla cake',
+      glutenFree: false,
       lactoseFree: false,
       mainComponents: 'komponendid ',
-      price: 10
+      price: 10,
+      keywords: ''
   },
 
 

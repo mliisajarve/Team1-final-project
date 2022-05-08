@@ -1,4 +1,4 @@
-<body [class] = "hideForm">
+<div [class] = "hideForm" class="body">
     <form (submit)="onOrderSubmit($event)">
         <section class="contact-inputs">
             <section class="inputs">
@@ -16,8 +16,8 @@
                         <option *ngFor="let c of category">{{c.name}}</option>
                     </select>
                     <p *ngIf="isCategorySelected" class="product-selection"></p>
-                    <select name="selection" class="select-product"  *ngIf="isCategorySelected"  [(ngModel)]="selProduct">
-                        <option  class="option" *ngFor="let any of cakePretzelRolls" >{{any.name}}</option>
+                    <select  name="selection" class="select-product"  *ngIf="isCategorySelected"  [(ngModel)]="selProduct">
+                        <option class="option" *ngFor="let any of cakePretzelRolls" >{{any.name}}</option>
                     </select>
                 </section>
                 <p class="amount"></p>
@@ -35,9 +35,9 @@
             <input type="submit" class="submit-button" [value]='sendStatus'>
         </section>
     </form>
-</body>
+</div>
 <div *ngIf="hideForm" class="success-result">
     <p>Thanks!</p>
     <p>Your order has been sent successfully!</p>
-    <i class="fa-solid fa-circle-check"></i>
+    <img src="../../assets/Icons/circle-check-regular.svg" alt="">
 </div>

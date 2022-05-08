@@ -1,3 +1,10 @@
+:root {
+    --font: 18px;
+}
+*{
+    font-family: var(--font-family);
+    letter-spacing: 2px;
+}
 @keyframes visibility {
     from{
        transform: scale(0.4);
@@ -11,23 +18,21 @@
     }
 }
 
-body{
+.body{
     min-height: 500px;
     width: 600px;
-    box-shadow: 2px 2px 40px 5px rgb(190, 177, 184); ;
+    box-shadow: 2px 2px 100px 5px rgba(218, 179, 200, 0.349); ;
     border-radius: 20px;
     animation: visibility;
     animation-duration: 2s;
 }
 
-body::before{
+.body::before{
     display: flex;
     justify-content: center;
     content: 'Enter Your order';
-    font-family: 'Indie Flower', cursive;
     font-weight: bold;
     font-size: 25px;
-    letter-spacing: 2px;
     text-decoration: underline;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -39,18 +44,22 @@ body::before{
     flex-direction: column;
     align-items: center;
 }
-input{
+input:not(.submit-button){
     height: 40px;
-    width: 200px;
+    width: 250px;
     margin-bottom: 10px;
     border-radius: 10px;
     border: 1px solid rgb(171, 147, 147);
+    padding: 20px;
+    font-size: var(--font);
 }
 textarea{
     margin-top: 10px;
     border-radius: 10px;
     width: 400px;
-    border: 1px solid rgb(171, 147, 147)
+    border: 1px solid rgb(171, 147, 147);
+    padding: 20px;
+    font-size: var(--font);
 }
 textarea:hover, input:not(.submit-button):hover,.select-category:hover, .select-product:hover{
     cursor: pointer;
@@ -60,14 +69,13 @@ textarea:hover, input:not(.submit-button):hover,.select-category:hover, .select-
 input:not(.submit-button):focus, textarea:focus{
     border: none;
     outline: 3px solid rgb(130, 193, 216);
+    background-color: rgba(240, 248, 255, 0.384);
 }
 
 p::after {
     display: block;
     color: black;
-    font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    letter-spacing: 2px;
     position: relative;
     top: 1px;
     left: 10px;
@@ -116,24 +124,24 @@ p.product-selection::after{
 }
 
 .select-category, .select-product{
-    height: 36px;
-    width: 200px;
+    height: 40px;
+    width: 250px;
     border-radius: 10px;
     border: 1px solid rgb(171, 147, 147);
-    font-family: 'Indie Flower', cursive; ;
     font-weight: 600 ;
-    font-size: 14px;
-    letter-spacing: 1px;
     margin-bottom: 15px;
     margin-top: 15px;
-    background-color: rgba(245, 245, 220, 0.466) ;
+    background-color: rgba(245, 245, 220, 0.466);
+    font-size: var(--font);
 }
 
+
 option{
-    font-family: 'Indie Flower', cursive; ;
+    font-family: var(--font-family);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center; 
+    
 }
 
 /* submit button */
@@ -144,13 +152,13 @@ option{
     justify-content: center;
     background: linear-gradient(var(--header-footer-dark),  var(--header-footer-light));
     height: 50px;
-    min-width: 50px;
+    width: 200px;
     border-radius: 10px;
-    font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    letter-spacing: 2px;
     margin-top: 20px;
-    font-size: 19px;
+    margin-bottom: 20px;
+    font-size: var(--font);
+    border: 1px solid rgb(171, 147, 147);
     transition: box-shadow 0.1s ease-out;
 }
 .submit-button:hover {
@@ -203,36 +211,34 @@ option{
     bottom: 50%;
     background-color: rgb(235, 235, 235, 0.662);
     border-radius: 10px;
-    font-family: 'Indie Flower', cursive;
     font-size: 30px;
     font-weight: 500;
 }
 
 /* icon styling */
-.fa-solid {
-    margin-top: 20px;
-    color: rgb(29, 226, 29);
-    font-size: 50px;
+img{
+    background-color: greenyellow;
+    height: 60px;
+    border-radius: 50%;
 }
 
 /* if required inputs arent filled */
 .inputError{
     display: flex;
     flex-direction: row;
-    font-family: 'Indie Flower', cursive;
     font-weight: bold;
     margin-top: 5px;
     color: red;
-    font-size: 19px;
+    font-size: var(--font);
 }
 
 /* mobile version */
 
 @media screen and (max-width: 525px) {
-    body{
+    .body{
         width: 325px;
     }
-    body::before{
+    .body::before{
         font-size: 17px;
     }
     p::after{
@@ -248,6 +254,14 @@ option{
     }
     textarea{
         width: 300px;
+        height: 150px;
+    }
+    option{
+        text-align: center;
+    }
+    .success-result{
+        position: relative;
+        bottom:10%
     }
     @keyframes formOpening{
         from{
@@ -260,7 +274,7 @@ option{
         }
 
     }
-    body{
+    .body{
         animation: formOpening;
         animation-duration: 2s;
         animation-timing-function: ease-in;

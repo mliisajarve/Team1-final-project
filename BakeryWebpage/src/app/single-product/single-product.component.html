@@ -1,10 +1,12 @@
-<!-- nendega saab ligipääsu tordid.service failis olevatele andmetele
+<section class="product-container">
+    <div class="image-container">
+        <img [src]="description.imageUrl" alt="">
+    </div>
+    <div class="description container">
+        <p class="product-data">{{description.name}}</p>
+        
+        <p class="product-data">{{description.mainComponents}}</p>
+        <p class="product-data">{{description.price}}</p>
 
--->
-<img [src]="description.imageUrl" height="40px" alt="">
-
-<p>{{description.name}}</p>
-<p>{{description.glutenFree}}</p>
-<p>{{description.lactoseFree}}</p>
-<p>{{description.mainComponents}}</p>
-<p>{{description.price}}</p>
+    </div>
+</section>

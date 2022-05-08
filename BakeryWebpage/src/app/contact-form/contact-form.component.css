@@ -11,23 +11,25 @@
     }
 }
 
+*{
+    font-family: var(--font-family);
+    letter-spacing: 2px;
+}
 
-body{
+.body{
     min-height: 500px;
     width: 600px;
-    box-shadow: 2px 2px 40px 5px rgb(190, 177, 184); ;
+    box-shadow: 2px 2px 100px 5px rgba(218, 179, 200, 0.349); ;
     border-radius: 20px;
     animation: visibility;
     animation-duration: 2s;
 }
-body::before{
+.body::before{
     display: flex;
     justify-content: center;
     content: 'Your feedback or questions';
-    font-family: 'Indie Flower', cursive;
     font-weight: bold;
     font-size: 25px;
-    letter-spacing: 2px;
     text-decoration: underline;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -38,35 +40,39 @@ body::before{
     flex-direction: column;
     align-items: center;
 }
-input{
+input:not(.submit-button){
     height: 35px;
-    width: 200px;
+    width: 250px;
     margin-bottom: 10px;
     border-radius: 10px;
     border: 1px solid rgb(171, 147, 147);
+    font-size: 18px ;
+    padding: 20px;
 }
 textarea:hover, input:not(.submit-button):hover{
     cursor: pointer;
     border: 1px solid rgba(130, 193, 216, 0.6);
 }
 
-input:not(.submit-button):focus{
+input:not(.submit-button):focus, textarea:focus{
     border: none;
     outline: 2px solid rgb(130, 193, 216);
+    background-color: rgba(240, 248, 255, 0.384);
 }
 textarea{
     margin: 0;
     border-radius: 10px;
     width: 350px;
-    border: 1px solid rgb(171, 147, 147)
+    height: 150px;
+    border: 1px solid rgb(171, 147, 147);
+    padding: 20px;
+    font-size: 18px;
 }
 
 p::after {
     display: block;
     color: black;
-    font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    letter-spacing: 2px;
     position: relative;
     top: 1px;
     left: 10px;
@@ -88,7 +94,7 @@ p.number::after{
 }
 p.additional::after{
     content: 'Feedback/questions*';
-    width: 175px;
+    width: 205px;
 }
 .buttonClass{
     height: 170px
@@ -100,14 +106,15 @@ p.additional::after{
     justify-content: center;
     background: linear-gradient(var(--header-footer-light),var(--header-footer-dark));
     height: 50px;
-    min-width: 50px;
+    min-width: 200px;
     border-radius: 10px;
-    font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    letter-spacing: 2px;
+  
     margin-top: 35px;
     font-size: 19px;
     transition: box-shadow 0.1s ease-out;
+    margin-bottom: 20px;
+    border: 1px solid rgb(171, 147, 147);
 }
 .submit-button:hover {
     cursor: pointer;
@@ -154,22 +161,20 @@ p.additional::after{
     bottom: 50%;
     background-color: rgb(235, 235, 235, 0.662);
     border-radius: 10px;
-    font-family: 'Indie Flower', cursive;
     font-size: 30px;
     font-weight: 500;
 }
 
 
-.fa-solid {
-    margin-top: 20px;
-    color: rgb(29, 226, 29);
-    font-size: 50px;
+img{
+    background-color: greenyellow;
+    height: 60px;
+    border-radius: 50%;
 }
 
 .inputError{
     display: flex;
     flex-direction: row;
-    font-family: 'Indie Flower', cursive;
     font-weight: bold;
     margin-top: 25px;
     color: red;
@@ -177,10 +182,10 @@ p.additional::after{
 }
 
 @media screen and (max-width: 525px) {
-    body{
+    .body{
         width: 325px;
     }
-    body::before{
+    .body::before{
         font-size: 17px;
     }
     p::after{
@@ -196,6 +201,11 @@ p.additional::after{
     }
     textarea{
         width: 300px;
+        height: 150px;
+    }
+    .success-result{
+        position: relative;
+        bottom:15%
     }
     @keyframes formOpening2{
         from{
@@ -206,7 +216,7 @@ p.additional::after{
         }
 
     }
-    body{
+    .body{
         animation: formOpening2;
         animation-duration: 2s;
         animation-timing-function: ease-in;
