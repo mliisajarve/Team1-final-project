@@ -19,6 +19,8 @@ import { TordidComponent } from './tordid/tordid.component';
 import { KringlidComponent } from './kringlid/kringlid.component';
 import { SaiakesedComponent } from './saiakesed/saiakesed.component';
 import { SingleProductComponent } from './single-product/single-product.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { ProductsPageComponent } from './products-page/products-page.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { SingleProductComponent } from './single-product/single-product.componen
     TordidComponent,
     KringlidComponent,
     SaiakesedComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    FeedbackComponent,
+    ProductsPageComponent
   ],
   imports: [
     BrowserModule,

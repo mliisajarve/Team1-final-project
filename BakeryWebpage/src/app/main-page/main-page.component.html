@@ -3,38 +3,14 @@
         <div class="welcome-header">
             <h2>Welcome to the <br>SS Little Bakery <br> Homepage!</h2>
         </div>
+
         <div class="welcome-text">
             <h3>I am very happy to see you here! Baking is my passion and happy clients are the best reward for turning Your wishes into the reality. In this page you can browse and order different pastry goods. Beside regular cakes, bagels, buns  and torts, You can find products without gluten and lactose.  See <a routerLink="/cakes">products</a> or <a routerLink="/contact">contact</a> me!</h3>
-         </div>
-
-         <carousel class="image-carousel" [images]="images" [cellsToShow]="4" [cellWidth]="50" [loop]="true" [autoplay]="true"
-         [autoplayInterval]="3000" [pauseOnHover]="true" objectFit="contain"  [arrowsOutside]="true" [borderRadius]="15"></carousel>
-
-        <div class="feedback-div">
-            <carousel [objectFit]="'cover'" [cellWidth]="'100%'"   [arrows]="false" [autoplay]="true" [autoplayInterval]="5000"  [loop]="true" [transitionTimingFunction] = "'ease-in-out'" [pauseOnHover]="true">
-                <div class="carousel-cell">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <h4>Best cakes I have ever tasted!</h4>
-                    <h4> - Alina</h4>
-                </div>
-                <div class="carousel-cell">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <h4>Best!</h4>
-                    <h4> - Paul</h4>
-                </div>
-                <div class="carousel-cell">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt eum ex dolor voluptas doloribus debitis corporis laborum molestias placeat nihil pariatur laboriosam, dicta soluta ipsum itaque fuga a est hic.</h4>
-                    <h4> - Thomas</h4>
-                </div>
-                <div class="carousel-cell">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <h4>All good!</h4>
-                    <h4> - Liina</h4>
-                </div>
-            </carousel>
-                
         </div>
-        
+
+        <carousel class="image-carousel" [images]="images" [cellsToShow]="4" [cellWidth]="50" [loop]="true" [autoplay]="true"
+        [autoplayInterval]="3000" [pauseOnHover]="true" objectFit="contain"  [arrowsOutside]="true" [borderRadius]="15"></carousel>
+
+        <app-feedback></app-feedback>
     </div>
 </body>
