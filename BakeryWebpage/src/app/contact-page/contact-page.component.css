@@ -14,10 +14,24 @@
 
 body{
     width: 100%;
-    animation-name: page-visibility ;
+    animation-name: page-visibility;
     animation-duration: 2s;
-    padding-bottom: 100px;
+    background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url(../../assets/images/Background-cakes-color.png);
+    position: relative;
+    top: 0px;
+    min-height: 100vh;
+    margin-bottom: 0px;
 }
+
+.front-div {
+    background-color: var(--header-footer-light);
+    min-height: 100vh;
+    margin: 0px 200px 0 200px;
+    padding: 20px 70px 150px 70px;
+    text-align: center;
+    font-family: 'Indie Flower', sans-serif;
+}
+
 /* content before buttons */
 .select-approach{
     font-family: 'Indie Flower', cursive;
@@ -25,6 +39,7 @@ body{
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: 40px;
+    padding-top: 70px;
 }
 /* form positioning */
 .form{
@@ -60,7 +75,7 @@ body{
 .form-button{
     display: flex;
     justify-content: space-evenly;
-    
+    padding-top: 50px;
 }
 /* make order and contact buttons */
 .order-button, .contact-button{

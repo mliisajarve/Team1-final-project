@@ -27,12 +27,7 @@ body {
 }
 
 .welcome-text a {
-    color: var(--black);
-}
-
-.welcome-text a:hover {
-    font-size: larger;
-    font-weight: 700;
+    color: var(--header-footer-dark);
 }
 
 .image-carousel{
