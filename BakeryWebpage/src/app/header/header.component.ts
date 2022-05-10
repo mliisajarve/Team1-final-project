@@ -10,9 +10,14 @@ export class HeaderComponent implements OnInit {
    
 dropdownStatus = 'dropdown-content';
 
+  isShown: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showSearch() {
+    this.isShown = ! this.isShown;
   }
 
   /* hideShowNav() : void {

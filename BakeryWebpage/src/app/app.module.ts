@@ -21,6 +21,7 @@ import { SaiakesedComponent } from './saiakesed/saiakesed.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
+import { SearchInputComponent } from './search-input/search-input.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ProductsPageComponent } from './products-page/products-page.component';
     SaiakesedComponent,
     SingleProductComponent,
     FeedbackComponent,
-    ProductsPageComponent
+    ProductsPageComponent,
+    SearchInputComponent
   ],
   imports: [
     BrowserModule,

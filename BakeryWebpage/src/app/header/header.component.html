@@ -14,7 +14,11 @@
                 </div>
         </div>
         <a aria-current="page" routerLink="/contact">Contacts</a>
-        <a aria-current="page"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a aria-current="page"><i class="fa-solid fa-magnifying-glass" (click)="showSearch()"></i></a>
+        <div *ngIf="isShown" class="search-div">
+          <input class="search-text" type="search" placeholder="Search: lactosefree etc">
+          <input class="search-btn" type="button" value="Search">
+      </div>
     </nav>
 
     <div class="hidden-nav">
@@ -27,7 +31,7 @@
                   <a href="#">Link 3</a>
                 </div>
             <a aria-current="page" routerLink="/contact">Contacts</a>
-            <a aria-current="page"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a aria-current="page"><i class="fa-solid fa-magnifying-glass" ></i></a>
         </div>
         <a href="" class="icon">
           <i class="fa fa-bars"></i>
