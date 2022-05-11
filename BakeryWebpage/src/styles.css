@@ -12,16 +12,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* animation if changing between pages */
 @keyframes page-visibility {
     from{
-        
         opacity: 0;
-        visibility: hidden;
     }
     to{
-        
         opacity: 1.0;
-        visibility: visible;
     }
 }
 
@@ -29,5 +27,5 @@
 body{
     width: 100%;
     animation-name: page-visibility ;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
 }

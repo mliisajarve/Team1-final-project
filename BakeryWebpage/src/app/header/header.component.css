@@ -134,74 +134,38 @@ header {
 
 /* MOBILE NAV  HIDDEN*/
 
-.hidden-nav {
-    overflow: hidden;
-    background-color: transparent;
-    position: relative;
-  }
-  
-  .hidden-nav #navLinks {
-    display: none;
-  }
-  
-  .hidden-nav a.icon {
-    display:  none;
-  }
+.mobile-navbar{
+  display: none;
+}
+
+
+
 
 @media screen and (max-width: 525px) {
     header {
-       height: 150px;
-        flex-direction: row;
+      display: flex;
+      height: 150px;
+      justify-content: space-around;
     }
-    
-    .header-logo {
-        left: 30px;
-        top: 0px;
+   .navbar{
+     display: none;
+   }
+    .navbarMobile{
+      display: flex;
+      flex-direction: column;
+      justify-content:flex-start;
+      gap: 50px;
+      min-height: 95vh;
+      width: 100%;
+      background:linear-gradient(0.25turn, var(--header-footer-dark), #ebf8e1, var(--header-footer-dark));
+      position: absolute;
+      top: 150px;
+      padding-top: 50px;
     }
-    
-    .header-logo a img {
-        width: 110px;
+    .mobile-navbar{
+      display: inline;
     }
-    
-    .navbar {
-        display: none
+    .icon i {
+      font-size: xxx-large;
     }
-
-    /* MOBILE NAV SHOW */
-    
-    .hidden-nav {
-        overflow:visible;
-        background-color: #fff;
-        position: relative;
-      }
-      
-      .hidden-nav #navLinks {
-        display: none;
-      }
-      
-      .topnav a {
-        color: var(--black);
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        display: block;
-      }
-      
-      .hidden-nav a.icon {
-        background: var(--white);
-        border-radius: 100px;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        display: block;
-        position: absolute;
-        right: 30px;
-        top: -25px;
-        padding: 6px
-      }
-      
-      .hidden-nav a:hover {
-        box-shadow: 1px 1px 15px var(--white);
-      }
-    
-}
+  }

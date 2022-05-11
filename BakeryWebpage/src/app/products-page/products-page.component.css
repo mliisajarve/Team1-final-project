@@ -50,6 +50,10 @@ strong.important {
 .products-text a {
     color: var(--header-footer-dark);
 }
+a{
+    text-decoration: none;
+    color: var(--header-footer-dark);
+}
 
 .form-button{
     display: flex;

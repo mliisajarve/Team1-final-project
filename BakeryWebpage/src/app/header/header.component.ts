@@ -1,4 +1,3 @@
-import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,26 +6,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-   
-dropdownStatus = 'dropdown-content';
-
+  navbarMobile: string = ''
+  dropdownStatus = 'dropdown-content';
   isShown: boolean = false;
-  constructor() { }
+  iconImg: string = 'fa fa-bars'
 
+  constructor() {
+   }
+  
   ngOnInit(): void {
   }
-
+ 
   showSearch() {
     this.isShown = ! this.isShown;
   }
-
-  /* hideShowNav() : void {
-    let x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+  onHamburger(){
+    if(window.screen.width< 525 && this.navbarMobile != 'navbarMobile'){
+    this.navbarMobile = 'navbarMobile'
+    this.iconImg = 'fa-solid fa-xmark'
     } else {
-      x.style.display = "block";
+      this.navbarMobile= ''
+      this.iconImg = 'fa fa-bars'
     }
-  } */
-
+  }
+  onAnyWhere(){
+    if(window.screen.width< 525)
+    this.navbarMobile= ''
+    this.iconImg = 'fa fa-bars'
+  }
+  
 }
