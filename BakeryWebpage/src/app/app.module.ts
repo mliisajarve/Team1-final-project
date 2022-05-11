@@ -22,6 +22,7 @@ import { SingleProductComponent } from './single-product/single-product.componen
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { SearchInputComponent } from './search-input/search-input.component';
+import { StickyButtonComponent } from './sticky-button/sticky-button.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { SearchInputComponent } from './search-input/search-input.component';
     SingleProductComponent,
     FeedbackComponent,
     ProductsPageComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    StickyButtonComponent,
   ],
   imports: [
     BrowserModule,

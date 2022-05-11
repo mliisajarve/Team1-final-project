@@ -1,0 +1,35 @@
+.fixed {
+  position: fixed;
+  width: 150px;
+  height: 80px;
+  bottom: 150px;
+  right: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+  
+  background: linear-gradient(to top right,var(--header-footer-dark), white,var(--header-footer-light)) ;
+  border: 2px dotted var(--header-footer-dark);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30%;
+ 
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  font-family: 'Indie Flower', cursive;
+
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+i{
+  color: rgba(255, 68, 0, 0.548);
+  font-size: 20px;
+}
+ 
