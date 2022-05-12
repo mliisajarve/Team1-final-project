@@ -87,3 +87,21 @@ a{
     text-decoration: underline;
     font-size: 22px;
 }
+@media screen and (max-width: 525px) {
+    body{
+        background: none;
+    }
+    .front-div{
+        margin: 0px ;
+        padding: 20px;
+        padding-bottom: 100px;
+        background: var(--header-footer-light);
+    }
+    .form-button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+}

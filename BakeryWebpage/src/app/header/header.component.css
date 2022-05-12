@@ -99,56 +99,60 @@ header {
 }
   
   /* Dropdown content (hidden by default) */
-  .dropdown-content {
+  .dropdown-hide {
     display: none;
   }
 
   .dropdown i {
     color: var(--orange);
   }
-
-  .dropdown:hover .dropdown-content {
+.dropdown{
+  display: flex;
+  flex-direction: column;
+}
+  .desktopDropdown {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
     position: absolute;
     top: 38px;
-    left: -20px;
+    left: 20px;
     background-color: var(--header-footer-light);
-    min-width: 150px;
-    min-height: 100px;
+    min-width: 140px;
+    min-height: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 10px;
     z-index: 1;
+    letter-spacing: 2px;
+    gap: 10px;
   }
   
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 10px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-/* MOBILE NAV  HIDDEN*/
-
 .mobile-navbar{
   display: none;
 }
 
 
-
-
 @media screen and (max-width: 525px) {
     header {
       display: flex;
-      height: 150px;
+      min-height: 150px;
       justify-content: space-around;
+      
     }
    .navbar{
      display: none;
+   }
+   @keyframes navbarAni {
+     0%{
+      left: 100vw
+     }
+     50%{
+      left: -10vw;
+     }
+     100%{
+       left: 0;
+     }
    }
     .navbarMobile{
       display: flex;
@@ -161,11 +165,45 @@ header {
       position: absolute;
       top: 150px;
       padding-top: 50px;
+      animation-name: navbarAni;
+      animation-duration: 1.3s;
     }
     .mobile-navbar{
       display: inline;
     }
+    @keyframes iconAni {
+      from{
+        transform: rotate3d(0, 1, 0.6, 3.142rad);
+      }
+      to{
+        transform: rotate3d(0);
+      }
+    }
     .icon i {
       font-size: xxx-large;
     }
+    .icon-animation {
+    animation: iconAni;
+    animation-duration: 4s;
+    }
+    .mobileDropdown{
+      display: flex;
+      position: relative;
+      left: 20%;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 20px;
+      min-height: 75px;
+      width: 100%;
+      padding-top: 20px;
+    }
+    .mobileDropdown a{
+      border-top: 3px dotted var(--header-footer-dark);
+    }
+
+    .navbar a:hover::after{
+      content: '';
+      width: 0%;
+    }
+    
   }

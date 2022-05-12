@@ -98,7 +98,7 @@ i{
 
 @media screen and (max-width: 525px) {
     body{
-        background: aliceblue;
+        background: none;
     }
     .front-div{
         margin: 0px ;
