@@ -1,41 +1,34 @@
-<header>
-    <div class="header-logo">
-        <a routerLink="/"><img src="../../assets/images/SSLITTLEBAKERY.png" alt=""></a>
-        
-    </div>
-    <nav class="navbar">
-        <a aria-current="page" routerLink="/">Home</a>
-        <div class="dropdown">
-          <a aria-current="page" routerLink="/products">Products <i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-content" >
-                  <a routerLink="/cakes">Cakes</a>
-                  <a routerLink="/bagels">Bagels</a>
-                  <a routerLink="/pastry">Pastry</a>
-                </div>
-        </div>
-        <a aria-current="page" routerLink="/contact">Contacts</a>
-        <a aria-current="page"><i class="fa-solid fa-magnifying-glass" (click)="showSearch()"></i></a>
-        <div *ngIf="isShown" class="search-div">
-          <input class="search-text" type="search" placeholder="Search: lactosefree etc">
-          <input class="search-btn" type="button" value="Search">
-      </div>
-    </nav>
+<header  >
+  <div class="header-logo">
+    <a routerLink="/"><img src="../../assets/images/SSLITTLEBAKERY.png" alt=""></a>
 
-    <div class="hidden-nav">
-        <div id="navLinks">
-            <a aria-current="page" routerLink="/">Home</a>
-            <a class="dropdown" aria-current="page">Products <i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-            <a aria-current="page" routerLink="/contact">Contacts</a>
-            <a aria-current="page"><i class="fa-solid fa-magnifying-glass" ></i></a>
-        </div>
-        <a href="" class="icon">
-          <i class="fa fa-bars"></i>
-        </a>
+  </div>
+
+  <nav  [ngClass]="navbarMobile" class= 'navbar' >
+    <a (click)="onResetNavbar()" aria-current="page" routerLink="/">Home</a>
+    <div (mouseleave)="leaveDropdown()"  class="dropdown">
+      <a aria-current="page" routerLink="/products"   (mouseenter)="onDropdown()" >Products <i  class="fa fa-caret-down"></i></a>
+      <div (click)="onResetNavbar()" [ngClass]="mobileToDesktopDropdown" >
+        <a routerLink="/cakes">Cakes</a>
+        <a routerLink="/bagels">Bagels</a>
+        <a routerLink="/pastry">Pastry</a>
       </div>
+    </div>
+    <a (click)="onResetNavbar()" aria-current="page" routerLink="/contact">Contacts</a>
+    <a aria-current="page"><i class="fa-solid fa-magnifying-glass" (click)="showSearch()"></i></a>
+    <div *ngIf="isShown" class="search-div">
+      <input class="search-text" type="search" placeholder="Search: lactosefree etc">
+      <input class="search-btn" type="button" value="Search">
+    </div>
+  </nav>
+
+  <!-- mobile navbar -->
+  <section class="mobile-navbar">
+
+
+    <div class="icon">
+      <i (click)="onHamburger()" [ngClass]="animation" [class]="iconImg"></i>
+    </div>
+  </section>
 
 </header>

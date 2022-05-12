@@ -82,7 +82,7 @@ export class SaiakesedService {
     {
       id:9,
       imageUrl: '../../assets/Products/saiakesed/Tuuletaskud.jpg',
-      name: 'Tuuletasku',
+      name: 'Profiterole',
       glutenFree: true,
       lactoseFree: false,
       mainComponents: 'komponendid',

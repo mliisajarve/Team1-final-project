@@ -1,21 +1,5 @@
-@keyframes page-visibility {
-    from{
-        
-        opacity: 0;
-        visibility: hidden;
-    }
-    to{
-        
-        opacity: 1.0;
-        visibility: visible;
-    }
-}
-
-
 body{
     width: 100%;
-    animation-name: page-visibility;
-    animation-duration: 2s;
     background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url(../../assets/images/Background-cakes-color.png);
     position: relative;
     top: 0px;
@@ -113,6 +97,14 @@ i{
 /* mobile version */
 
 @media screen and (max-width: 525px) {
+    body{
+        background: none;
+    }
+    .front-div{
+        margin: 0px ;
+        padding: 0;
+        padding-bottom: 100px;
+    }
     .form-button{
         display: flex;
         flex-direction: column;
@@ -131,6 +123,8 @@ i{
         flex-direction: column;
         text-decoration: none;
     }
-    
+    .social-media{
+        margin-top: 140px;
+    }
 
 }
