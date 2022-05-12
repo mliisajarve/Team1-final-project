@@ -15,7 +15,7 @@ export class KringlidService {
       name: 'Cherry-chocolate bagel',
       glutenFree: false,
       lactoseFree: false,
-      mainComponents: 'komponendid',
+      mainComponents: 'hfuutcduc',
       price: 11,
       keywords: ''
     },

@@ -6,17 +6,11 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./sticky-button.component.css']
 })
 export class StickyButtonComponent implements OnInit {
-  formOption: boolean = false
-  buttonClicked: boolean = false
-  @Input() hero: any
-
   constructor() { }
 
   ngOnInit(): void {
   }
   onOrderButton() {
-    this.formOption = false
-    this.buttonClicked =  true
   }
 
 }

@@ -24,6 +24,9 @@ import { ProductsPageComponent } from './products-page/products-page.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { StickyButtonComponent } from './sticky-button/sticky-button.component';
 
+// const appRoutes: Routes =  [
+//   { path: 'order-form', component: OrderFormComponent }
+// ]
 
 @NgModule({
   declarations: [
@@ -48,7 +51,8 @@ import { StickyButtonComponent } from './sticky-button/sticky-button.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

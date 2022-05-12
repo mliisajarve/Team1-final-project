@@ -5,7 +5,9 @@ import { KringlidComponent } from './kringlid/kringlid.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { SaiakesedComponent } from './saiakesed/saiakesed.component';
+import { StickyButtonComponent } from './sticky-button/sticky-button.component';
 import { TordidComponent } from './tordid/tordid.component';
+
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -14,7 +16,7 @@ const routes: Routes = [
   {path: 'contact', component: ContactPageComponent},
   {path: 'cakes', component: TordidComponent},
   {path: 'bagels', component: KringlidComponent},
-  {path: 'pastry', component: SaiakesedComponent}
+  {path: 'pastry', component: SaiakesedComponent},
 ];
 
 @NgModule({
