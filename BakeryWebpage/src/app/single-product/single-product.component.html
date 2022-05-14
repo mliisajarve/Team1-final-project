@@ -3,11 +3,12 @@
         <img [src]="description.imageUrl" alt="">
     </div>
     <div class="description container">
-        <p class="product-data">{{description.name}}</p>
-        <p>{{ description.glutenFree}}</p>
-        
-        <p class="product-data">{{description.mainComponents}}</p>
-        <p class="product-data">{{description.price}}</p>
+        <p class="product-data">{{description.name | titlecase}}</p>
+        <p class="product-data"> {{ description.glutenFree | titlecase}}</p>
+        <p class="product-data">{{ description.lactoseFree | titlecase}}</p>
+        <p class="product-data">{{description.mainComponents | titlecase}}</p>
+        <p class="product-data">{{ description.price }}</p>
+        <!-- <p class="product-data">{{ description.price | currency:"EUR" + " "+ "/" + " " + "Kg" + " "}}</p> -->
 
     </div>
 </section>

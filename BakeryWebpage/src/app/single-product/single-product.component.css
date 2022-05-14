@@ -4,7 +4,13 @@
     align-items: center;
     min-width: 400px;
     border-radius: 10px;
-    box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.2);
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    border: 2px dotted var(--header-footer-dark);
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to top right,var(--header-footer-dark), white,var(--header-footer-light)) ;
+    border: 2px dotted var(--header-footer-dark);
+    font-size: 16px;
 }
 img{
     padding-top: 10px;
