@@ -33,8 +33,8 @@ export class HeaderComponent implements OnInit {
     setTimeout(()=>{
       this.animation = ''
     },100)
-    } else {
-      this.navbarMobile= ''
+    } else if(this.navbarMobile) {
+      this.navbarMobile= 'closingNavbarMobile'
       this.iconImg = 'fa fa-bars'
       this.animation = 'icon-animation'
       setTimeout(()=>{
@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
   // for mobile view resetting, if any link is clicked, then hiding mobile nav, and changing icon back to hamburger
   onResetNavbar(){
     if(window.screen.width< 525){
-    this.navbarMobile= ''
+    this.navbarMobile= 'closingNavbarMobile'
     this.iconImg = 'fa fa-bars'
     }
   }
@@ -61,7 +61,8 @@ export class HeaderComponent implements OnInit {
   }
   // if mouse comes out of products list
   leaveDropdown(){
-    this.mobileToDesktopDropdown = 'dropdown-hide'
+  this.mobileToDesktopDropdown = 'dropdown-hide'
+   
    }
 
    showSearch() {
