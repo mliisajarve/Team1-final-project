@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  navbarMobile: string = ''
-  dropdownStatus = 'dropdown-content';
+  @Output() search: EventEmitter<string> = new EventEmitter<string>()
+
+  inputValue: string = "";
   isShown: boolean = false;
+  navbarMobile: string = ''
   iconImg: string = 'fa fa-bars'
   mobileToDesktopDropdown: string = ''
   animation: string = ''
-  constructor() {
+  constructor(private router: Router) {
    }
   
   ngOnInit(): void {
@@ -20,9 +23,6 @@ export class HeaderComponent implements OnInit {
     this.mobileToDesktopDropdown = 'dropdown-hide'
   }
  
-  showSearch() {
-    this.isShown = ! this.isShown;
-  }
 
   // if hamburger is clicked / if navbar is opened and cross is clicked
   onHamburger(){
@@ -63,4 +63,12 @@ export class HeaderComponent implements OnInit {
   leaveDropdown(){
     this.mobileToDesktopDropdown = 'dropdown-hide'
    }
+
+   showSearch() {
+    this.isShown = ! this.isShown;
+  }
+  onHandleSubmit()  {
+    this.router.navigate(['/result']);
+    this.isShown = false;
+  }
 }

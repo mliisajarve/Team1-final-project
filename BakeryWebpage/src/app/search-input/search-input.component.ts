@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-search-input',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-input.component.css']
 })
 export class SearchInputComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private router: Router) { 
+  }
 
   ngOnInit(): void {
   }
+
 
 }

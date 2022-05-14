@@ -1,6 +1,10 @@
-<app-header></app-header>
+<app-header (search)="onSearch($event)"></app-header>
 
 <main>
+  <div *ngIf="isShown">
+    <app-search-outcome-page [searchOutcome]="inputValue2"></app-search-outcome-page>
+  </div>
+  
   <router-outlet (activate)="onActivate($event)"></router-outlet>
 </main>
 

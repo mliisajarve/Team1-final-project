@@ -6,6 +6,7 @@ main{
     background-color: var(--header-footer-light);
 }
 
+
 @media screen  and (max-width: 425px) {
     main{
         top: 150px;

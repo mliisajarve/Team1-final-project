@@ -23,6 +23,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { StickyButtonComponent } from './sticky-button/sticky-button.component';
+import { SearchOutcomePageComponent } from './search-outcome-page/search-outcome-page.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { StickyButtonComponent } from './sticky-button/sticky-button.component';
     ProductsPageComponent,
     SearchInputComponent,
     StickyButtonComponent,
+    SearchOutcomePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,7 @@ import { StickyButtonComponent } from './sticky-button/sticky-button.component';
     IvyCarouselModule,
     
   ],
-  providers: [],
+  providers: [SearchInputComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,10 +15,10 @@
       </div>
     </div>
     <a (click)="onResetNavbar()" aria-current="page" routerLink="/contact">Contacts</a>
-    <a aria-current="page"><i class="fa-solid fa-magnifying-glass" (click)="showSearch()"></i></a>
+    <a  aria-current="page"><i class="fa-solid fa-magnifying-glass" (click)="showSearch()"></i></a>
     <div *ngIf="isShown" class="search-div">
-      <input class="search-text" type="search" placeholder="Search: lactosefree etc">
-      <input class="search-btn" type="button" value="Search">
+      <input [(ngModel)]="inputValue" class="search-text" type="search" placeholder="Search: lactosefree etc" aria-label="Search">
+      <input (click)="search.emit(inputValue)" (click)="onHandleSubmit()"  class="search-btn" type="button" value="Search">
     </div>
   </nav>
 
