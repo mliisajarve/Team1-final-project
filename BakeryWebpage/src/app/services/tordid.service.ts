@@ -15,7 +15,7 @@ export class TordidService {
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggwhite, milk, butter, cream cheese, orange',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg", 
-      keywords: ''
+      keywords: ['orange', 'cream cheese', 'gluten', 'lactose']
   },
    {  
       id: 2,
@@ -25,7 +25,7 @@ export class TordidService {
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, butter, cocoa powder, dark chocolate',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['cocoa', 'chocolate', 'dark chocolate', 'lactose', 'gluten']
   },
    {  
       id: 3,
@@ -35,7 +35,7 @@ export class TordidService {
       lactoseFree: "latose free",
       mainComponents: 'flour, egg, butter, sour cream, orange, coffee extract',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg" ,
-      keywords: ''
+      keywords: ['coffee', 'orange', 'lactose', 'gluten']
   },
    {  
       id: 4,
@@ -45,7 +45,7 @@ export class TordidService {
       lactoseFree: "lactose free",
       mainComponents: 'biscuites, sour cream, whipped cream ',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['biscuite', 'whipped cream', 'lactose', 'gluten']
   },
    {  
       id: 5,
@@ -55,7 +55,7 @@ export class TordidService {
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, butter, cocoa powder, milk, whipped cream',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['cocoa', 'souffle', 'lactose', 'gluten']
   },
    {  
       id: 6,
@@ -65,7 +65,7 @@ export class TordidService {
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, butter, cream cheese, strawberries',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['strawberry','strawberries', 'cream cheese','lactose'],
   },
    {  
       id: 7,
@@ -75,7 +75,7 @@ export class TordidService {
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, butter, cream cheese, blueberries',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['blueberry', 'blueberries', 'cream cheese', 'lactose', 'gluten']
   },
    {  
       id: 8,
@@ -85,7 +85,7 @@ export class TordidService {
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, milk, butter, whipped cream, vanilla extact',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['vanilla', 'lactose', 'gluten']
   },
 
 

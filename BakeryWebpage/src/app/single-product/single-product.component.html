@@ -8,6 +8,8 @@
         <p class="product-data">{{ description.lactoseFree | titlecase}}</p>
         <p class="product-data">{{description.mainComponents | titlecase}}</p>
         <p class="product-data">{{ description.price }}</p>
+        <p class="product-data">{{ description.icon + "fas" + "align-left" }}</p>
+        <!-- <fa-icon [icon]="['fas', 'align-left']"></fa-icon> -->
         <!-- <p class="product-data">{{ description.price | currency:"EUR" + " "+ "/" + " " + "Kg" + " "}}</p> -->
 
     </div>

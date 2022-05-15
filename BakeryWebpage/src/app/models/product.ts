@@ -7,5 +7,5 @@ export interface Product {
     lactoseFree?: any
     mainComponents?: string
     price?: any
-    keywords?: string
+    keywords?: any
 }

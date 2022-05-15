@@ -13,8 +13,9 @@ export class SaiakesedService {
       name: 'Eclair',
       glutenFree: "gluten free",
       lactoseFree: "lactose free",      
-      mainComponents: 'flour, eggs, butter, whipped cream, butter, cocoa powder',
-      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg"
+      mainComponents: 'flour, eggs, whipped cream, butter, cocoa powder',
+      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
+      keywords: ['eclair', 'cocoa','whipped', 'gluten', 'lactose']
     },
     {
       id:2,
@@ -23,7 +24,8 @@ export class SaiakesedService {
       glutenFree: "gluten free",
       lactoseFree: "lactose free",      
       mainComponents: 'flour, milk, eggs, butter, yeast, cheese',
-      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg"
+      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
+      keywords: ['cheese', 'yeast', 'gluten', 'lactose']
     },
     {
       id:3,
@@ -31,8 +33,9 @@ export class SaiakesedService {
       name: 'Cherry - martzipan roll',
       glutenFree: "gluten free",
       lactoseFree: "lactose free",
-            mainComponents: 'flour, eggs, butter, almond flour, cherries',
-      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg"
+      mainComponents: 'flour, eggs, butter, almond flour, cherries',
+      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
+      keywords: ['cherry', 'almond','marzipan', 'gluten', 'lactose']
     },
     {
       id:4,
@@ -41,7 +44,8 @@ export class SaiakesedService {
       glutenFree: "gluten free",
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, butter, cream cheese, cocoa powder',
-      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg"
+      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
+      keywords: ['cherry', 'chocolate','muffin', 'gluten', 'lactose']
     },
     {
       id:5,
@@ -50,7 +54,8 @@ export class SaiakesedService {
       glutenFree: "gluten free",
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, butter, sausage, minced meat',
-      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg"
+      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
+      keywords: ['salty', 'cheese','meat', 'sausage', 'gluten', 'lactose']
     },
     {
       id:6,
@@ -59,7 +64,8 @@ export class SaiakesedService {
       glutenFree: "gluten free",
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, butter, cream cheese, cocoa powder',
-      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg"
+      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
+      keywords: ['lemon', 'cream cheese','shortbread', 'gluten', 'lactose']
     },
     {
       id:7,
@@ -68,7 +74,8 @@ export class SaiakesedService {
       glutenFree: "gluten free",
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, whipped cream, cream cheese, carrot juice',
-      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg"
+      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
+      keywords: ['carrot', 'muffin', 'gluten', 'lactose']
     },
     {
       id:8,
@@ -77,7 +84,8 @@ export class SaiakesedService {
       glutenFree: "gluten free",
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, butter, cream cheese, cocoa powder, lemon peel',
-      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg"
+      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
+      keywords: ['lemon', 'cream cheese', 'cocoa', 'chocolate', 'gluten', 'lactose']
     },
     {
       id:9,
@@ -86,7 +94,8 @@ export class SaiakesedService {
       glutenFree: "gluten free",
       lactoseFree: "lactose free",
       mainComponents: 'flour, eggs, milk, whipped cream, cocoa powder',
-      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg"
+      price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
+      keywords: ['cocoa', 'profiterole', 'gluten', 'lactose']
     },
   ]
   constructor() { }

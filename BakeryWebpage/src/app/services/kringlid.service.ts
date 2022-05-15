@@ -18,7 +18,7 @@ export class KringlidService {
       lactoseFree: "lactose free",      
       mainComponents: 'Milk, eggs, flour, butter, chocolate powder, cherries',
       price: 11 + " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['cherry', 'cherries','chocolate', 'gluten', 'lactose']
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ export class KringlidService {
       lactoseFree: "lactose free",      
       mainComponents: 'Milk, eggs, flour, butter, pear compote, pistachios',
       price: 11 + " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['pistacio', 'pear','bagel', 'gluten', 'lactose']
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ export class KringlidService {
       lactoseFree: "lactose free",      
       mainComponents:'eggs, flour, butter, chocolate powder, raspberries, hazelnuts',
       price: 11+ " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['nuts','hazelnut', 'raspberry', 'chocolate', 'gluten', 'lactose']
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ export class KringlidService {
       lactoseFree: "lactose free",      
       mainComponents: 'Milk, eggs, flour, butter, chocolate powder, dark chocolate',
       price: 11+ " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['chocolate', 'bagel', 'gluten', 'lactose']
     },
     {
       id: 5,
@@ -62,7 +62,7 @@ export class KringlidService {
       lactoseFree: "lactose free",      
       mainComponents: 'Milk, eggs, flour, butter, chocolate powder, hazelnuts',
       price: 11+ " " + "Eur" + " "+ "/" + " " + "Kg",
-
+      keywords: ['chocolate', 'bagel', 'hazelnut', 'gluten', 'lactose']
     },
     {
       id: 6,
@@ -73,7 +73,7 @@ export class KringlidService {
       lactoseFree: "lactose free",      
       mainComponents: 'Milk, eggs, flour, butter, ham, cheese',
       price: 11+ " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ''
+      keywords: ['salty','cheese', 'ham', 'bagel', 'gluten', 'lactose']
     },
 
   ]
