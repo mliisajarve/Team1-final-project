@@ -7,9 +7,10 @@ main{
 }
 
 
-@media screen  and (max-width: 425px) {
+@media screen  and (max-width: 525px) {
     main{
         top: 150px;
+        
     }
     
 }

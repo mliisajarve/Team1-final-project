@@ -42,7 +42,6 @@ body {
     }
     .front-div{
         margin: 0px ;
-        padding: 20px;
         padding-bottom: 100px;
         background: var(--header-footer-light);
     }

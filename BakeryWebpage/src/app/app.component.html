@@ -1,7 +1,7 @@
 <app-header (search)="onSearch($event)"></app-header>
 
 <main>
-  <div *ngIf="isShown">
+  <div (mouseleave)="hide()" >
     <app-search-outcome-page [searchOutcome]="inputValue2"></app-search-outcome-page>
   </div>
   
