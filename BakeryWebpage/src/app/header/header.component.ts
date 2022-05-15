@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() search: EventEmitter<string> = new EventEmitter<string>()
+  @Output() search: EventEmitter<string> = new EventEmitter<string>();
 
   inputValue: string = "";
   isShown: boolean = false;
@@ -72,4 +72,6 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/result']);
     this.isShown = false;
   }
+
+
 }

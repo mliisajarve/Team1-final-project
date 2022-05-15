@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { SearchInputComponent } from '../search-input/search-input.component';
 
 @Component({
   selector: 'app-search-outcome-page',
@@ -9,17 +7,12 @@ import { SearchInputComponent } from '../search-input/search-input.component';
 })
 export class SearchOutcomePageComponent implements OnInit {
   @Input() searchOutcome: string = "";
-  
-  inputValue2: string = "";
-  isShown: boolean = false;
 
-  constructor(private searchInput: SearchInputComponent, private router: Router) {
+  constructor() {
    }
 
 
   ngOnInit(): void {
-
   }
-
 
 }
