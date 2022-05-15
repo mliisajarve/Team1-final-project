@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SearchOutcomePageComponent implements OnInit {
   @Input() searchOutcome: string = "";
+  @Input() keywords: string = '';
 
   constructor() {
    }

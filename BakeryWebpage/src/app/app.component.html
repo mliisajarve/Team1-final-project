@@ -1,7 +1,7 @@
 <app-header  (search)="onSearch($event)"></app-header>
 <main>
   <div (mouseleave)="hide()" >
-    <app-search-outcome-page [searchOutcome]="inputValue2"></app-search-outcome-page>
+    <app-search-outcome-page [searchOutcome]="inputValue2" [keywords]="searchKey"></app-search-outcome-page>
   </div>
   
   <router-outlet (activate)="onActivate($event)"></router-outlet>
