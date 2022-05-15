@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
     setTimeout(()=>{
       this.animation = ''
     },100)
-    } else if(this.navbarMobile) {
+    } else {
       this.navbarMobile= 'closingNavbarMobile'
       this.iconImg = 'fa fa-bars'
       this.animation = 'icon-animation'
@@ -55,7 +55,7 @@ export class HeaderComponent implements OnInit {
     if(window.screen.width< 525 && this.mobileToDesktopDropdown != 'mobileDropdown'){
     this.mobileToDesktopDropdown = 'mobileDropdown'
     
-    } else if(window.screen.width> 525){
+    } else if(window.screen.width> 525 && this.mobileToDesktopDropdown !='desktopDropdown'){
       this.mobileToDesktopDropdown = 'desktopDropdown'
     }
   }

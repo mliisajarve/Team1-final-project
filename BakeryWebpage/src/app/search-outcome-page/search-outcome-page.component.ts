@@ -21,15 +21,5 @@ export class SearchOutcomePageComponent implements OnInit {
 
   }
 
-  showSearch() {
-    this.isShown = ! this.isShown;
-  }
-
-  onSearch(searchText:string):void {
-    this.router.navigate(['/result']);
-    this.isShown = false;
-    console.log(searchText)
-    this.inputValue2 = searchText;
-  }
 
 }

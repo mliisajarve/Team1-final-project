@@ -17,13 +17,15 @@ export class AppComponent {
 
   onActivate(event:any) {
     window.scroll(0,0);
+    
   }
 
   onSearch(searchText:string):void {
-    console.log(searchText)
     this.inputValue2 = searchText;
-    this.isShown = ! this.isShown;
-  }
+    this.isShown = true;
+    
+    }
+ 
 
 
 }

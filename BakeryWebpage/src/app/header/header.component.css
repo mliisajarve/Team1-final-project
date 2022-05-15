@@ -170,10 +170,8 @@ header {
     animation-duration: 1s;
   }
   
-.mobile-navbar{
-  display: none;
-}
-.closingNavbarMobile{
+
+.navbarMobile, .closingNavbarMobile, .mobile-navbar{
   display: none;
 }
 
