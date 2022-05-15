@@ -32,4 +32,10 @@ a:hover, a:active {
   color: rgba(255, 68, 0, 0.548);
   font-size: 20px;
 } */
+
+@media screen and (max-width: 525px) {
+  .fixed{
+    display: none;
+  }
+}
  

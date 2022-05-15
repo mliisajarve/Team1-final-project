@@ -11,6 +11,9 @@
         <carousel class="image-carousel" [images]="images" [cellsToShow]="4" [cellWidth]="50" [loop]="true" [autoplay]="true"
         [autoplayInterval]="3000" [pauseOnHover]="true" objectFit="contain"  [arrowsOutside]="true" [borderRadius]="15"></carousel>
 
+        <carousel class="mobile-carousel" [images]="images" [cellsToShow]="1" [cellWidth]="30" [loop]="true" [autoplay]="true"
+        [autoplayInterval]="3000" [pauseOnHover]="true" objectFit="contain" [arrows]="false" [borderRadius]="15"></carousel>
+
         <app-feedback></app-feedback>
     </div>
     <app-sticky-button></app-sticky-button>
