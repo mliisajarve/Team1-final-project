@@ -129,13 +129,13 @@ header {
 }
   
   /* Dropdown content (hidden by default) */
-  .dropdown-hide {
+.dropdown-hide {
     display: none;
-  }
+}
 
-  .dropdown i {
+.dropdown i {
     color: var(--orange);
-  }
+}
 .dropdown{
   display: flex;
   flex-direction: column;
@@ -170,11 +170,19 @@ header {
     animation-duration: 1s;
   }
   
-
 .navbarMobile, .closingNavbarMobile, .mobile-navbar{
   display: none;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: center;
+  }
+
+  .header-logo {
+    left: -20px;
+  }
+}
 
 @media screen and (max-width: 525px) {
     header {
