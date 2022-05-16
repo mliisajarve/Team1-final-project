@@ -1,10 +1,10 @@
 export interface Product {
     id: number
     imageUrl?: any
-    name?: string 
+    name?: string
     icon?: any
-    glutenFree?: any
-    lactoseFree?: any
+    glutenFree?:any
+    lactoseFree?: boolean
     mainComponents?: string
     price?: any
     keywords?: any

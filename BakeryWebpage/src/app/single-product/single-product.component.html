@@ -4,13 +4,18 @@
     </div>
     <div class="description container">
         <p class="product-data">{{description.name | titlecase}}</p>
-        <p class="product-data"> {{ description.glutenFree | titlecase}}</p>
-        <p class="product-data">{{ description.lactoseFree | titlecase}}</p>
         <p class="product-data">{{description.mainComponents | titlecase}}</p>
         <p class="product-data">{{ description.price }}</p>
-        <p class="product-data">{{ description.icon + "fas" + "align-left" }}</p>
-        <!-- <fa-icon [icon]="['fas', 'align-left']"></fa-icon> -->
-        <!-- <p class="product-data">{{ description.price | currency:"EUR" + " "+ "/" + " " + "Kg" + " "}}</p> -->
+        <img *ngIf= "description.lactoseFree" id="lactose" src= "../../assets/Icons/lactose-free.png" alt="Lactose Free">
+        <img *ngIf= "description.glutenFree" id= "gluten" src="../../assets/Icons/gluten-free.png" alt="Gluten Free">
+      
+        <!-- <div class="intolerance"> -->
+            <!-- <p class="product-data">{{ description.glutenFree | titlecase}}</p>
+            <p class="product-data">{{ description.lactoseFree | titlecase}}</p>  -->
+        
+        <!-- <p *ngIf="description.lactoseFree" class="product-data"> <i class="fa-solid fa-check"></i>  {{ description.glutenFree | titlecase}}</p> -->
+        <!-- <p *ngIf="description.glutenFree" id= "gluten"> <i class="fa-solid fa-check"></i>  {{ description.glutenFree | titlecase}}</p> -->
 
+    
     </div>
 </section>

@@ -24,6 +24,7 @@ import { ProductsPageComponent } from './products-page/products-page.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { StickyButtonComponent } from './sticky-button/sticky-button.component';
 import { SearchOutcomePageComponent } from './search-outcome-page/search-outcome-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { SearchOutcomePageComponent } from './search-outcome-page/search-outcome
     AppRoutingModule,
     FormsModule,
     IvyCarouselModule,
+    FontAwesomeModule,
     
   ],
   providers: [SearchInputComponent],
