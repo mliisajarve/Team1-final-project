@@ -2,8 +2,9 @@
   position: fixed;
   width: 150px;
   height: 80px;
-  bottom: 150px;
-  right: 50px;
+  bottom: 45px;
+  right: 25px;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,10 +33,19 @@ a:hover, a:active {
   color: rgba(255, 68, 0, 0.548);
   font-size: 20px;
 } */
+@media screen and (max-width: 768px) {
+  .fixed {
+    width: 120px;
+    height: 60px;
+    bottom: 60px;
+    right: 10px;
+    font-size: 12px;
+  }
+}
 
 @media screen and (max-width: 525px) {
   .fixed{
     display: none;
   }
 }
- 
+

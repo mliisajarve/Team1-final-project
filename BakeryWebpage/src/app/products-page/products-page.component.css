@@ -12,7 +12,7 @@ body {
     margin: 0px 200px 0 200px;
     padding: 20px 70px 150px 70px;
     text-align: center;
-    font-family: 'Indie Flower', sans-serif;
+    font-family: var(--font-family);
     
 }
 
@@ -22,7 +22,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 50px;
-    font-family: var(--font-family);
 }
 
 h2, h3 {
@@ -48,9 +47,6 @@ strong.important {
 }
 
 .products-text a {
-    color: var(--header-footer-dark);
-}
-a{
     text-decoration: none;
     color: var(--header-footer-dark);
 }
@@ -65,8 +61,9 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--font-family);
     font-size: 20px;
+    color: var(--black);
     font-weight: bold;
     background: linear-gradient(to top right,var(--header-footer-dark), white,var(--header-footer-light)) ;
     height: 125px;
@@ -75,6 +72,11 @@ a{
     border-radius: 30%;
     border: 2px dotted var(--header-footer-dark);
     box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-button a {
+    text-decoration: none;
+    color: var(--black);
 }
 
 .product-button:active {
@@ -87,6 +89,29 @@ a{
     text-decoration: underline;
     font-size: 22px;
 }
+
+@media screen and (max-width: 1024px) {
+    .form-button{
+        margin-top: 0px;
+    }
+
+    .product-button {
+        height: 125px;
+        width: 200px;
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .front-div {
+        margin: 0px 100px 0 100px;
+    }
+
+    .product-button {
+        height: 100px;
+    }
+}
+
 @media screen and (max-width: 525px) {
     body{
         background: none;
@@ -103,5 +128,14 @@ a{
         align-items: center;
         gap: 20px;
     }
+}
+
+@media screen and (max-width: 375px) {
+    h2 {
+        font-size: x-large;
+    }
     
+    h3 {
+        font-size: large;
+    }
 }

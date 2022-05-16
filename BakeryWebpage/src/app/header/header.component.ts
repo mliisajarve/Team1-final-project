@@ -7,10 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() search: EventEmitter<string> = new EventEmitter<string>();
-
-  inputValue: string = "";
-  isShown: boolean = false;
+  
+  
   navbarMobile: string = ''
   iconImg: string = 'fa fa-bars'
   mobileToDesktopDropdown: string = ''
@@ -64,14 +62,6 @@ export class HeaderComponent implements OnInit {
   this.mobileToDesktopDropdown = 'dropdown-hide'
    
    }
-
-   showSearch() {
-    this.isShown = ! this.isShown;
-  }
-  onHandleSubmit()  {
-    this.router.navigate(['/result']);
-    this.isShown = false;
-  }
 
 
 }

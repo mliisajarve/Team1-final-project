@@ -13,7 +13,6 @@ body {
     padding: 20px 70px 150px 70px;
     text-align: center;
     font-family: 'Indie Flower', sans-serif;
-    
 }
 
 .welcome-header {
@@ -35,10 +34,37 @@ body {
     z-index: 0;
 }
 
+.tablet-carousel{
+    display: none;
+}
+
 .mobile-carousel{
     display: none;
 }
 
+@media screen and (max-width: 768px) {
+    .front-div {
+        margin: 0px 100px 0 100px;
+    }
+    
+    .welcome-text a {
+        color: var(--header-footer-dark);
+    }
+    
+    .image-carousel{
+    display: none;
+    }
+
+    .tablet-carousel{
+        display: block;
+        margin-top: 50px;
+        z-index: 0;
+    }
+    
+    .mobile-carousel{
+        display: none;
+    }
+}
 
 @media screen and (max-width: 525px) {
     body{
@@ -67,10 +93,14 @@ body {
         display: none;
     }
 
+    .tablet-carousel{
+        display: none;
+    }
+
     .mobile-carousel{
         display: block;
         margin-top: 50px;
         z-index: 0;
     }
-    
 }
+
