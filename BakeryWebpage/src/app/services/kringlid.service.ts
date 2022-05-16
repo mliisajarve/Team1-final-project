@@ -18,7 +18,7 @@ export class KringlidService {
       lactoseFree: "lactose free",      
       mainComponents: 'Milk, eggs, flour, butter, chocolate powder, cherries',
       price: 11 + " " + "Eur" + " "+ "/" + " " + "Kg",
-      keywords: ['cherry', 'cherries','chocolate', 'gluten', 'lactose']
+      keywords: ['cherry', 'cherries','chocolate', 'gluten', 'lactose', ]
     },
     {
       id: 2,

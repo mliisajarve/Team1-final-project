@@ -92,42 +92,6 @@ header {
     gap: 10px;
   }
 
-  .search-div {
-    background-color:rgba(255, 255, 255, 0.9);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items:flex-start;
-    padding-top: 200px;
-    min-height: 100vh;
-    min-width: 100vw;
-    position: absolute;
-    top: 150px;
-    left: 0px;
-}
-
-.search-text {
-  width: 400px;
-  padding: 20px;
-  font-size: larger;
-  font-family: var(--font-family);
-  border-radius: 20px;
-  border: 2px dotted var(--header-footer-dark);
-  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.search-btn {
-  width: 100px;
-  padding: 20px;
-  background: linear-gradient(to top right,var(--header-footer-dark), white,var(--header-footer-light)) ;
-  font-size: larger;
-  font-family: var(--font-family);
-  margin-left: 30px;
-  border-radius: 30%;
-  border: 2px dotted var(--header-footer-dark);
-  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
-}
-  
   /* Dropdown content (hidden by default) */
 .dropdown-hide {
     display: none;

@@ -1,9 +1,12 @@
-    <div *ngIf="keywords">
-        <div>
-            <p> You searched for  {{searchOutcome}} </p>
-        </div>
-        <div>
-            <p>Result: {{ keywords }}</p>
-        </div>
+<body>
+    <div class="search-div">
+        <input (keyup)="lenght()" [(ngModel)]="inputValue" class="search-text" type="search" placeholder="Search: lactosefree etc"
+        aria-label="Search">
     </div>
-
+    <section *ngIf="required" class="searchResult">
+        <app-single-product [description]="cakeResult" *ngFor="let cakeResult of cakeSearch | filter:inputValue" ></app-single-product>
+        <app-single-product [description]="bagelResult" *ngFor="let bagelResult of bagelSearch | filter:inputValue"></app-single-product>
+        <app-single-product [description]="pastryResult" *ngFor="let pastryResult of pastrySearch | filter:inputValue"></app-single-product>
+    </section>
+</body>
+<!--  -->
