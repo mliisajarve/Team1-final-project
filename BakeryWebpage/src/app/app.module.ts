@@ -21,15 +21,10 @@ import { SaiakesedComponent } from './saiakesed/saiakesed.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
-import { SearchInputComponent } from './search-input/search-input.component';
 import { StickyButtonComponent } from './sticky-button/sticky-button.component';
-<<<<<<< HEAD
 import { SearchOutcomePageComponent } from './search-outcome-page/search-outcome-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-=======
-import { SearchOutcomePageComponent } from './search-outcome-page/search-outcome-page.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
->>>>>>> 38e1d57f099f7619fcdbaae8e80ba792ab9da3fb
 
 
 @NgModule({
@@ -48,7 +43,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     SingleProductComponent,
     FeedbackComponent,
     ProductsPageComponent,
-    SearchInputComponent,
     StickyButtonComponent,
     SearchOutcomePageComponent,
   ],
@@ -57,14 +51,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AppRoutingModule,
     FormsModule,
     IvyCarouselModule,
-<<<<<<< HEAD
     FontAwesomeModule,
-    
-=======
     Ng2SearchPipeModule
->>>>>>> 38e1d57f099f7619fcdbaae8e80ba792ab9da3fb
   ],
-  providers: [SearchInputComponent],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

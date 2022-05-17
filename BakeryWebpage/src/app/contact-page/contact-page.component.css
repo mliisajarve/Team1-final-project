@@ -13,12 +13,11 @@ body{
     margin: 0px 200px 0 200px;
     padding: 20px 70px 150px 70px;
     text-align: center;
-    font-family: 'Indie Flower', sans-serif;
+    font-family: var(--font-family);
 }
 
 /* content before buttons */
 .select-approach{
-    font-family: 'Indie Flower', cursive;
     font-size: 28px;
     font-weight: bold;
     text-decoration: underline;
@@ -31,7 +30,6 @@ body{
     justify-content: center;
     position: relative;
     top:100px;
-    
 }
 /* social media box positioning */
 .social-media{
@@ -66,10 +64,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--font-family);
     font-size: 20px;
     font-weight: bold;
-    background: linear-gradient(to top right,var(--header-footer-dark), white,var(--header-footer-light)) ;
+    background: linear-gradient(to top right,var(--header-footer-dark), var(--white),var(--header-footer-light)) ;
     height: 125px;
     width: 200px;
     cursor: pointer;
@@ -81,7 +79,7 @@ body{
 .order-button:active, .contact-button:active {
     box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
     transform: scale(0.9);
-    background: linear-gradient(to top right, var(--header-footer-light), white, var(--header-footer-dark) );
+    background: linear-gradient(to top right, var(--header-footer-light), var(--white), var(--header-footer-dark) );
 }
 
 .order-button:hover, .contact-button:hover {
@@ -94,6 +92,42 @@ i{
     color: rgba(255, 68, 0, 0.548);
     font-size: 25px;
 }
+
+/* laptop version */
+
+@media screen and (max-width: 1024px) {
+    .order-button, .contact-button{
+        margin: 30px;
+    }
+}
+
+/* tablet version */
+
+@media screen and (max-width: 768px) {
+    .front-div {
+        margin: 0px 100px 0 100px;
+        padding: 20px 50px 70px 50px;
+    }
+
+    .social-media{
+        margin-top: 150px;
+    }
+
+    .form-button{
+        padding-top: 10px;
+    }
+
+    .order-button, .contact-button{
+        font-size: 18px;
+        height: 100px;
+        width: 240px;
+    }
+    
+    i{
+        font-size: 20px;
+    }
+}
+
 /* mobile version */
 
 @media screen and (max-width: 525px) {
@@ -128,4 +162,3 @@ i{
     }
 }
 
-@media screen and (max-width: 768px) {}

@@ -3,7 +3,7 @@ header {
     background: linear-gradient(var(--header-footer-dark),  var(--header-footer-light));
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     position: fixed;
     width: 100%;
@@ -34,7 +34,7 @@ header {
     text-decoration: none;
     font-size: 23px;
     font-weight: 700;
-    font-family: 'Indie Flower', sans-serif;
+    font-family: var(--font-family);
 }
 
 .navbar a:hover {
@@ -138,6 +138,8 @@ header {
   display: none;
 }
 
+/* tablet version */
+
 @media screen and (max-width: 768px) {
   header {
     justify-content: center;
@@ -147,6 +149,8 @@ header {
     left: -20px;
   }
 }
+
+/* mobile version */
 
 @media screen and (max-width: 525px) {
     header {

@@ -2,35 +2,88 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 400px;
-    min-height: 450px;
-
+    width: 420px;
+    height: 540px;
     border-radius: 10px;
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--font-family);
     font-weight: bold;
     border: 2px dotted var(--header-footer-dark);
     box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to top right,var(--header-footer-dark), white,var(--header-footer-light)) ;
-    border: 2px dotted var(--header-footer-dark);
+    background: linear-gradient(to top right,var(--header-footer-dark), var(--white),var(--header-footer-light));
     font-size: 16px;
 }
+
+.image-container{
+    margin: 20px;
+}
+
 img{
-    padding-top: 10px;
     height: 280px;
-    max-width: 375px;
+    width: 375px;
     border-radius: 25px;
+    object-fit: cover;
 }
+
+.description-container{
+    margin: 20px;
+    left: 0px;
+}
+
+.description-container p{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.description-container .title{
+    text-decoration: underline;
+    font-size: x-large;
+}
+
 #gluten {
-    width: 50px;
-    height: auto;
-}
- #lactose {
+    margin-top: 15px;
     width: 50px;
     height: auto;
 }
 
+ #lactose {
+    margin-top: 15px;
+    width: 50px;
+    height: auto;
+}
+
+/* mobile versions */
 
 @media screen and (max-width: 525px) {
+    .product-container{
+        width: 320px;
+    }
     
+    img{
+        height: 275px;
+        width: 275px;
+    }
 
+    .description-container .title{
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .product-container{
+        width: 280px;
+    }
+
+    .image-container{
+        margin: 15px 15px 0px 15px;
+    }
+    
+    img{
+        height: 275px;
+        width: 245px;
+    }
+
+    .description-container .title{
+        font-size: large;
+    }
 }

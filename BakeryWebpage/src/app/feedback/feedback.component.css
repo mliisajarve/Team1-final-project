@@ -9,19 +9,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .text-carousel {
     z-index: 0;
 }
 
+/* laptop version */
+
 @media screen and (max-width: 1024px) {
     .feedback-div {
         font-size: large;
         padding: 55px;
     }
-  }
+}
+
+/* tablet version */
 
 @media screen and (max-width: 768px) {
     .feedback-div {
@@ -29,6 +32,8 @@
         padding: 35px;
     }
 }
+
+/* mobile versions */
 
 @media screen and (max-width: 525px) {
     .feedback-div {
