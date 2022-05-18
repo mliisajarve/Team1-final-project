@@ -23,8 +23,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { StickyButtonComponent } from './sticky-button/sticky-button.component';
 import { SearchOutcomePageComponent } from './search-outcome-page/search-outcome-page.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({

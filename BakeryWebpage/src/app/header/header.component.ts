@@ -59,9 +59,8 @@ export class HeaderComponent implements OnInit {
   }
   // if mouse comes out of products list
   leaveDropdown(){
-  this.mobileToDesktopDropdown = 'dropdown-hide'
-   
-   }
-
+     this.mobileToDesktopDropdown = 'dropdown-hide'
+  }
+ 
 
 }
