@@ -57,7 +57,7 @@ export class SaiakesedService {
       price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
       keywords: ['salty', 'cheese','meat', 'sausage', 'gluten', 'lactose']
     },
-    {
+    /* {
       id:6,
       imageUrl: '../../assets/Products/saiakesed/Muretaignakorvikesed sidrunikreemi ja sefiiriga.jpg',
       name: 'Shortbread tarts with lemon cream',
@@ -66,7 +66,7 @@ export class SaiakesedService {
       mainComponents: 'flour, eggs, butter, cream cheese, cocoa powder',
       price: 12 + " " + "Eur" + " "+ "/" + " " + "Kg",
       keywords: ['lemon', 'cream cheese','shortbread', 'gluten', 'lactose']
-    },
+    }, */
     {
       id:7,
       imageUrl: '../../assets/Products/saiakesed/porgandimuffinid, laktoosi-gluteeni vabad.jpg',

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser'
 @Component({
   selector: 'app-contact-form',
@@ -12,8 +13,8 @@ export class ContactFormComponent implements OnInit {
   info: string = ''
   hideForm: string = ''
   sendStatus: string = 'Send'
-  someFieldEmpty: boolean = false
-  constructor() { }
+  someFieldEmpty: boolean = false;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
@@ -25,7 +26,9 @@ export class ContactFormComponent implements OnInit {
 
         .then((result: EmailJSResponseStatus) => {
           if (result.text == 'OK') {
-            this.hideForm = 'hidden'
+            this.hideForm = 'hidden';
+            setTimeout(()=> this.router.navigate(['home']) 
+        ,4500)
           }
         })
     } else {

@@ -4,10 +4,10 @@
 
   </div>
 
-  <nav  [ngClass]="navbarMobile" class= 'navbar' >
+  <nav [class]="navbarMobile" class= 'navbar' >
     <a (click)="onResetNavbar()" aria-current="page" routerLink="/">Home</a>
-    <div (mouseleave)="leaveDropdown()"  class="dropdown">
-      <a aria-current="page" routerLink="/products"   (mouseenter)="onDropdown()" >Products <i  class="fa fa-caret-down"></i></a>
+    <div (mouseleave)="leaveDropdown()" class="dropdown">
+      <a class="product" aria-current="page" routerLink="/products" (click)="onMobileDropdown()"  (mouseenter)="onDropdown()" >Products <i  class="fa fa-caret-down"></i></a>
       <div (click)="onResetNavbar()" [ngClass]="mobileToDesktopDropdown" >
         <a routerLink="/cakes">Cakes</a>
         <a routerLink="/bagels">Bagels</a>

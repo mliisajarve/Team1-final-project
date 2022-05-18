@@ -11,16 +11,12 @@ export class HeaderComponent implements OnInit {
   
   navbarMobile: string = ''
   iconImg: string = 'fa fa-bars'
-  mobileToDesktopDropdown: string = ''
+  mobileToDesktopDropdown: string = 'dropdown-hide'
   animation: string = ''
-  constructor(private router: Router) {
-   }
-  
+
+  constructor() {}
   ngOnInit(): void {
-    //default dropdown class value
-    this.mobileToDesktopDropdown = 'dropdown-hide'
   }
- 
 
   // if hamburger is clicked / if navbar is opened and cross is clicked
   onHamburger(){
@@ -37,7 +33,10 @@ export class HeaderComponent implements OnInit {
       this.animation = 'icon-animation'
       setTimeout(()=>{
         this.animation = ''
+       
       },100)
+      setTimeout(()=> {
+      this.navbarMobile =''}, 1300)
     }
   }
 
@@ -46,21 +45,24 @@ export class HeaderComponent implements OnInit {
     if(window.screen.width< 525){
     this.navbarMobile= 'closingNavbarMobile'
     this.iconImg = 'fa fa-bars'
+    setTimeout(()=> {
+      this.navbarMobile =''}, 1300)
     }
   }
   // if dropdown link is hovered or clicked in mobile view, changing between classes, by default is value dropdown-hide
   onDropdown() {
-    if(window.screen.width< 525 && this.mobileToDesktopDropdown != 'mobileDropdown'){
-    this.mobileToDesktopDropdown = 'mobileDropdown'
-    
-    } else if(window.screen.width> 525 && this.mobileToDesktopDropdown !='desktopDropdown'){
+    if(window.screen.width> 525 && this.mobileToDesktopDropdown !='desktopDropdown'){
       this.mobileToDesktopDropdown = 'desktopDropdown'
     }
   }
   // if mouse comes out of products list
   leaveDropdown(){
-     this.mobileToDesktopDropdown = 'dropdown-hide'
+      this.mobileToDesktopDropdown = 'dropdown-hide'
   }
- 
+  onMobileDropdown() {
+    if(screen.width < 525){
+      this.mobileToDesktopDropdown = 'mobileDropdown'
+    } 
+  }
 
 }

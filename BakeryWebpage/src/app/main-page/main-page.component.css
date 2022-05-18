@@ -45,9 +45,6 @@ body {
 /* tablet version */
 
 @media screen and (max-width: 768px) {
-    .front-div {
-        margin: 0px 100px 0 100px;
-    }
     
     .welcome-text a {
         color: var(--header-footer-dark);
@@ -109,3 +106,17 @@ body {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .front-div{
+        margin: 0px 80px 0 80px;
+        padding: 20px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .front-div{
+        margin: 0;
+        padding: 20px;
+    }
+}

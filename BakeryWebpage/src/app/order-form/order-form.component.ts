@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { Product } from '../models/product';
 import { KringlidService } from '../services/kringlid.service';
 import { SaiakesedService } from '../services/saiakesed.service';
 import { TordidService } from '../services/tordid.service';
@@ -29,7 +29,7 @@ export class OrderFormComponent implements OnInit {
   cakePretzelRolls: any
   
 
-  constructor(private allCakeNames: TordidService, private allBagelNames: KringlidService, private allPastryNames: SaiakesedService) { }
+  constructor(private router: Router ,private allCakeNames: TordidService, private allBagelNames: KringlidService, private allPastryNames: SaiakesedService) { }
 
   ngOnInit(): void {
   }
@@ -41,18 +41,20 @@ public onOrderSubmit(e:Event) {
     emailjs.sendForm('service_v9cqahs','template_ayeznks', e.target as HTMLFormElement, 'QklSpd4CPoE0j1orE')
     .then((result: EmailJSResponseStatus) => {
       if(result.text === 'OK') {
-        this.hideForm = "hidden"
+        this.hideForm = "hidden";
+        setTimeout(()=> this.router.navigate(['home']) 
+        ,4500)
       }
     })
   } else {
     this.someFieldEmpty = true
-    setTimeout(()=> {
+    setTimeout(()=> 
       this.someFieldEmpty = false
-    }, 3000)
+    , 3000)
   }
 }
 
-// getting all product names from service sheets
+// getting all products names from service sheets
 onLoadSelected(selected:any) {
  this.isCategorySelected = true
 switch(selected.value) {

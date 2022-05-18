@@ -205,7 +205,7 @@ option{
     animation-name: resultShow;
     animation-duration: 2s;
     position:relative;
-    bottom: 50%;
+    bottom: 40%;
     background-color: rgb(235, 235, 235, 0.662);
     border-radius: 10px;
     font-size: 30px;
