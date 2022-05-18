@@ -32,7 +32,7 @@ export class TordidService {
       imageUrl: '../../assets/Products/tordid/Kohvikook_apelsinikook.jpg',
       name: 'Coffee & Orange cake',
       glutenFree: true,
-      lactoseFree: true,
+      lactoseFree: false,
       mainComponents: 'flour, egg, butter, sour cream, orange, coffee extract',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg" ,
       keywords: ['coffee', 'orange', 'lactose', 'gluten']
@@ -41,8 +41,8 @@ export class TordidService {
       id: 4,
       imageUrl: '../../assets/Products/tordid/küpsisetort.jpg',
       name: 'Biscuit cake',
-      glutenFree:  true,
-      lactoseFree:  true,
+      glutenFree:  false,
+      lactoseFree:  false,
       mainComponents: 'biscuites, sour cream, whipped cream ',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg",
       keywords: ['biscuite', 'whipped cream', 'lactose', 'gluten']
@@ -71,7 +71,7 @@ export class TordidService {
       id: 7,
       imageUrl: '../../assets/Products/tordid/Mustika tort- laktoosi,gluteeni vaba.jpg',
       name: 'Blueberry cake',
-      glutenFree:  true,
+      glutenFree:  false,
       lactoseFree:  true,
       mainComponents: 'flour, eggs, butter, cream cheese, blueberries',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg",
@@ -82,7 +82,7 @@ export class TordidService {
       imageUrl: '../../assets/Products/tordid/vanillitort.jpg',
       name: 'Vanilla cake',
       glutenFree: true,
-      lactoseFree: true,
+      lactoseFree: false,
       mainComponents: 'flour, eggs, milk, butter, whipped cream, vanilla extact',
       price: 10 + " " + "Eur" + " "+ "/" + " " + "Kg",
       keywords: ['vanilla', 'lactose', 'gluten']

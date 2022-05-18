@@ -1,8 +1,9 @@
 <body>
     <div class="search-div">
-        <input (keyup)="lenght()" [(ngModel)]="inputValue" class="search-text" type="search" placeholder="Search: lactosefree etc"
+        <input (keyup)="lenght()" [(ngModel)]="inputValue" class="search-text" type="search" placeholder="Search: by keyword"
         aria-label="Search">
     </div>
+    <p> You can enter your keyword to find your favourites faster. <br> If you don’t find what you’re looking for, feel free to contact us, because we may have good news for you. <br> <br><br> Enjoy with your loved ones!</p>
     <section *ngIf="required" class="searchResult">
         <app-single-product [description]="cakeResult" *ngFor="let cakeResult of cakeSearch | filter:inputValue" ></app-single-product>
         <app-single-product [description]="bagelResult" *ngFor="let bagelResult of bagelSearch | filter:inputValue"></app-single-product>

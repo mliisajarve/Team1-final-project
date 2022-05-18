@@ -43,8 +43,8 @@ export class KringlidService {
       id: 4,
       imageUrl: '../../assets/Products/kringlid/sokolaadikringel.jpg',
       name: 'Chocolate bagel',
-      glutenFree: true,
-      lactoseFree: true,     
+      glutenFree: false,
+      lactoseFree: false,     
       mainComponents: 'Milk, eggs, flour, butter, chocolate powder, dark chocolate',
       price: 11+ " " + "Eur" + " "+ "/" + " " + "Kg",
       keywords: ['chocolate', 'bagel', 'gluten', 'lactose']
@@ -53,8 +53,8 @@ export class KringlidService {
       id: 5,
       imageUrl: '../../assets/Products/kringlid/sokolaadi-pähkli kringel.jpg',
       name: 'Chocolate - hazelnut bagel',
-      glutenFree:  true,
-      lactoseFree: true,     
+      glutenFree:  false,
+      lactoseFree: false,     
       mainComponents: 'Milk, eggs, flour, butter, chocolate powder, hazelnuts',
       price: 11+ " " + "Eur" + " "+ "/" + " " + "Kg",
       keywords: ['chocolate', 'bagel', 'hazelnut', 'gluten', 'lactose']
