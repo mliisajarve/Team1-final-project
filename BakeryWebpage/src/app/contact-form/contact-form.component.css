@@ -180,15 +180,23 @@ img{
     font-size: 19px;
 }
 
+/* laptop version */
+
+@media screen and (max-width: 1024px) {
+    .body{
+        width: 440px;
+    }
+    textarea{
+        width: 300px;
+        height: 150px;
+    }
+}
+
 /* tablet version */
 
 @media screen and (max-width: 768px) {
     .body{
         width: 400px;
-    }
-    textarea{
-        width: 300px;
-        height: 150px;
     }
 }
 
@@ -213,7 +221,7 @@ img{
         border-radius: 15px;
     }
     textarea{
-        width: 300px;
+        width: 270px;
         height: 150px;
     }
     .success-result{
